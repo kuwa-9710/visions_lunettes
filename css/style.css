@@ -11,11 +11,20 @@ html {
 .header {
   display: flex;
   flex-direction: row;
-  padding: 0 61px 0 112px;
+  padding: 12px 61px 12px 112px;
   position: fixed;
   z-index: 9999;
   width: 100%;
-  top: 12px;
+  top: 0;
+  transition: all 0.3s ease;
+}
+.header.change-color {
+  color: #333333;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+.header.change-color .header__menu {
+  color: #333333;
 }
 .header__title {
   font-weight: bold;
@@ -243,6 +252,26 @@ html {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.business {
+  margin-top: 193px;
+  background-color: #86AC41;
+  position: relative;
+}
+.business::before {
+  position: absolute;
+  z-index: 1;
+  top: -200px;
+  content: "BUSINESS";
+  opacity: 0.03;
+  font-weight: 700;
+  font-size: 228px;
+  white-space: nowrap;
+}
+.business__container {
+  padding-top: 228px;
+  color: #fff;
 }
 
 .footer {

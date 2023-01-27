@@ -1,0 +1,9 @@
+.business {
+    margin-top: 193px;
+    background-color: $cBgGreen;
+    @include sectionBgText(BUSINESS);
+    &__container {
+        padding-top: 228px;
+        color: $cWhite;
+    }
+}

@@ -1,11 +1,21 @@
 .header {    
   display: flex;
   flex-direction: row;
-  padding: 0 61px 0 112px;
+  padding: 12px 61px 12px 112px;
   position: fixed;
   z-index: 9999;
   width: 100%;
-  top: 12px;
+  top: 0;
+  transition: all .3s ease;
+
+  &.change-color {
+    color: $cBlack;
+    backdrop-filter: blur(10px);
+
+    & .header__menu {
+      color: $cBlack;
+    }
+  }
 
   &__title {
     font-weight: bold;

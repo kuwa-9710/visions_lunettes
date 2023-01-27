@@ -1,0 +1,68 @@
+$titleTop: 347px;
+$titleLeft: -165px;
+
+.mv {
+  height: 100vh;  
+
+  &__content {
+    height: 80vh;
+    width: 919px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: $cBlack;
+  }
+
+  &__title {
+    font-size: 56px;
+    font-weight: bold;
+    position: absolute;
+    left: -300px;
+    top: 347px;
+  }
+
+  &__sub {
+    font-size: 24px;
+    font-weight: bold;
+    position: absolute;
+    left: -300px;
+    top: 411px;
+    margin-top: 8px;
+    & span {
+      text-decoration: underline $cGreen;
+    }
+  }
+
+  & .bg-image {
+    background-image: url("/image/bg-mv.jpg");
+    background-size: 924px;
+    border-radius: 0 0 0 273px;
+    height: 80vh;
+    width: 919px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    overflow: hidden;
+
+    &::before {
+      font-size: 56px;
+      font-weight: bold;
+      position: absolute;
+      left: -300px;
+      top: 347px;
+      color: $cWhite;
+      content: "目元から環境に優しく";
+      z-index: 1;
+    }
+    &::after {
+      font-size: 24px;
+      font-weight: bold;
+      position: absolute;
+      left: -300px;
+      top: 419px;
+      color: $cWhite;
+      z-index: 1;
+      content: "Visionsはメガネを通して社会のサステナビリティを向上させます";
+    }
+  }
+}

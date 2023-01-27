@@ -1,0 +1,38 @@
+.header {    
+  display: flex;
+  flex-direction: row;
+  padding: 0 61px 0 112px;
+  position: fixed;
+  z-index: 9999;
+  width: 100%;
+  top: 12px;
+
+  &__title {
+    font-weight: bold;
+    font-size: 32px;
+  }
+
+  &__nav {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+
+  &__menu {
+    display: flex;    
+    flex-direction: row;
+    color: $cWhite;
+    & li {
+        margin-right: 45px;
+    }
+  }
+
+  &__button {
+    padding: 12px 46px;
+    border-radius: 38px;
+    font-weight: bold;
+    color: $cWhite;
+    background-color: #67C308;
+  }
+}

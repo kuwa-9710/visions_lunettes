@@ -1,0 +1,201 @@
+@charset "UTF-8";
+html {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.wrap {
+  position: relative;
+  z-index: -1000;
+  overflow: hidden;
+  background-color: #FAF9F7;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  padding: 0 61px 0 112px;
+  position: fixed;
+  z-index: 9999;
+  width: 100%;
+  top: 12px;
+}
+.header__title {
+  font-weight: bold;
+  font-size: 32px;
+}
+.header__nav {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+.header__menu {
+  display: flex;
+  flex-direction: row;
+  color: #fff;
+}
+.header__menu li {
+  margin-right: 45px;
+}
+.header__button {
+  padding: 12px 46px;
+  border-radius: 38px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #67C308;
+}
+
+.mv {
+  height: 100vh;
+}
+.mv__content {
+  height: 80vh;
+  width: 919px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #333333;
+}
+.mv__title {
+  font-size: 56px;
+  font-weight: bold;
+  position: absolute;
+  left: -300px;
+  top: 347px;
+}
+.mv__sub {
+  font-size: 24px;
+  font-weight: bold;
+  position: absolute;
+  left: -300px;
+  top: 411px;
+  margin-top: 8px;
+}
+.mv__sub span {
+  -webkit-text-decoration: underline #67C308;
+          text-decoration: underline #67C308;
+}
+.mv .bg-image {
+  background-image: url("/image/bg-mv.jpg");
+  background-size: 924px;
+  border-radius: 0 0 0 273px;
+  height: 80vh;
+  width: 919px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  overflow: hidden;
+}
+.mv .bg-image::before {
+  font-size: 56px;
+  font-weight: bold;
+  position: absolute;
+  left: -300px;
+  top: 347px;
+  color: #fff;
+  content: "目元から環境に優しく";
+  z-index: 1;
+}
+.mv .bg-image::after {
+  font-size: 24px;
+  font-weight: bold;
+  position: absolute;
+  left: -300px;
+  top: 419px;
+  color: #fff;
+  z-index: 1;
+  content: "Visionsはメガネを通して社会のサステナビリティを向上させます";
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.swiper {
+  width: 100vw;
+}
+
+.news::before {
+  position: absolute;
+  z-index: -1;
+  top: 65vh;
+  content: "VISIONS NEWS";
+  opacity: 0.03;
+  font-weight: 700;
+  font-size: 228px;
+  white-space: nowrap;
+  -webkit-animation: animate-bg-text 20s linear infinite;
+          animation: animate-bg-text 20s linear infinite;
+}
+.news .container {
+  overflow: visible;
+}
+.news__list {
+  padding-top: 30px;
+}
+.news__list__item {
+  width: 296px;
+  margin-right: 55px;
+}
+.news__list__item:last-child {
+  margin-right: 0;
+}
+.news__list__image {
+  height: 227px;
+  width: 100%;
+  border-radius: 13px;
+}
+.news__list__info {
+  padding-top: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+.news__list__info .date {
+  font-size: 18px;
+  height: 28px;
+  line-height: 28px;
+  color: #939393;
+}
+.news__list__info .tag {
+  background-color: #86AC41;
+  color: #fff;
+  width: 134px;
+  height: 28px;
+  line-height: 28px;
+  text-align: center;
+}
+.news__list__title {
+  padding-top: 16px;
+  line-height: 1.5em;
+}
+
+@-webkit-keyframes animate-bg-text {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes animate-bg-text {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.title {
+  font-size: 48px;
+  font-weight: bold;
+}
+.title__sub {
+  font-size: 28px;
+  color: #86AC41;
+}
+
+.footer {
+  height: 300px;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,66 @@
+.news {
+  &::before {
+    position: absolute;
+    z-index: -1;
+    top: calc(100vh * 0.65);
+    content: "VISIONS NEWS";
+    opacity: 0.03;
+    font-weight: 700;
+    font-size: 228px;
+    white-space: nowrap;
+    animation: animate-bg-text 20s linear infinite;
+  }
+
+  .container {
+    overflow: visible;
+  }
+
+  &__list {
+    padding-top: 30px;
+    &__item {
+      width: 296px;
+      margin-right: 55px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    &__image {
+      height: 227px;
+      width: 100%;
+      border-radius: 13px;
+    }
+    &__info {
+      padding-top: 16px;
+      display: flex;
+      justify-content: space-between;
+
+      & .date {
+        font-size: 18px;
+        height: 28px;
+        line-height: 28px;
+        color: $cGray;
+      }
+      & .tag {
+        background-color: $cLightGreen;
+        color: $cWhite;
+        width: 134px;
+        height: 28px;
+        line-height: 28px;
+        text-align: center;
+      }
+    }
+    &__title {
+      padding-top: 16px;
+      line-height: 1.5em;
+    }
+  }
+}
+
+@keyframes animate-bg-text {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

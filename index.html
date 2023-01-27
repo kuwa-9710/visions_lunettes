@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visions Lunettes</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <!-- Destyle.css -->
+    <link rel="stylesheet" href="https://unpkg.com/destyle.css@3.0.2/destyle.min.css">
+    <!-- swiper.js css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- jQuery and js file-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script defer src="js/index.js"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <!-- header -->
+        <header class="header">
+            <h1 class="header__title">Visions</h1>
+            <nav class="header__nav">
+                <ul class="header__menu">
+                    <li><a href="/">ニュース</a></li>
+                    <li><a href="/">会社紹介</a></li>
+                    <li><a href="/">事業紹介</a></li>
+                    <li><a href="/">採用情報</a></li>
+                    <li><a href="/">お問い合わせ</a></li>
+                </ul>
+            </nav>
+            <button class="header__button">ONLINE SHOP</button>
+        </header>
+
+        <!-- mv -->
+        <div id="mv" class="mv">
+            <div class="mv__content">
+                <h2 class="mv__title">目元から環境に優しく</h2>
+                <p class="mv__sub">Visionsはメガネを通して社会のサステナビリティを向上させます</p>
+                <div class="bg-image"></div>
+            </div>
+        </div>
+
+        <div id="news" class="news">
+            <div class="news__content container">
+                <h2 class="title">NEWS</h2>
+                <span class="title__sub">最新情報</span>
+                <div class="swiper container">
+                    <ul class="news__list swiper-wrapper">
+                        <li class="news__list__item swiper-slide">
+                            <img class="news__list__image" src="/image/interview_1.jpg" alt="モデルがカメラを向けられている画像">
+                            <div class="news__list__info">
+                                <span class="date">2022.03.15</span>
+                                <span class="tag">インタビュー</span>
+                            </div>
+                            <p class="news__list__title">新商品プロダクトの裏側。デザイナー社員に初のインタビュー、Lunettesの開発秘話を話す</p>
+                        </li>
+                        <li class="news__list__item swiper-slide">
+                            <img class="news__list__image" src="/image/interview_2.jpg" alt="モデルがカメラを向けられている画像">
+                            <div class="news__list__info">
+                                <span class="date">2022.03.10</span>
+                                <span class="tag">インタビュー</span>
+                            </div>
+                            <p class="news__list__title">「Lunettes」が2022年度NICE DESIGN AWARDを受賞しました。</p>
+                        </li>
+                        <li class="news__list__item swiper-slide">
+                            <img class="news__list__image" src="/image/interview_3.jpg" alt="モデルがカメラを向けられている画像">
+                            <div class="news__list__info">
+                                <span class="date">2022.03.01</span>
+                                <span class="tag">インタビュー</span>
+                            </div>
+                            <p class="news__list__title">アプリリニューアルのお知らせ</p>
+                        </li>
+                        <li class="news__list__item swiper-slide">
+                            <img class="news__list__image" src="/image/interview_4.jpg" alt="モデルがカメラを向けられている画像">
+                            <div class="news__list__info">
+                                <span class="date">2022.03.01</span>
+                                <span class="tag">CSR</span>
+                            </div>
+                            <p class="news__list__title">メガネに関する実態調査「メガネ白書 2022」を発行しました</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- footer -->
+        <footer class="footer">
+
+        </footer>
+    </div>
+</body>
+
+</html>

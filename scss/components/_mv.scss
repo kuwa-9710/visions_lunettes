@@ -1,8 +1,8 @@
 $titleTop: 347px;
 $titleLeft: -165px;
 
-.mv {
-  height: 100vh;  
+.mv {  
+  height: 900px;
 
   &__content {
     height: 80vh;
@@ -40,6 +40,7 @@ $titleLeft: -165px;
     height: 80vh;
     width: 919px;
     position: absolute;
+    z-index: 10;
     top: 0;
     right: 0;
     overflow: hidden;

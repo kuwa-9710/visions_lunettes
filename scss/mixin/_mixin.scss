@@ -1,0 +1,14 @@
+@mixin sectionBgText($contentText) {
+  position: relative;
+  &::before {
+    position: absolute;
+    z-index: 1;
+    top: -200px;
+    content: "#{$contentText}";
+    opacity: 0.03;
+    font-weight: 700;
+    font-size: 228px;
+    white-space: nowrap;
+    animation: animate-bg-text 20s linear infinite;
+  }
+}

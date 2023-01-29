@@ -1,9 +1,64 @@
 .business {
-    margin-top: 193px;
-    background-color: $cBgGreen;
-    @include sectionBgText(BUSINESS);
-    &__container {
-        padding-top: 228px;
-        color: $cWhite;
+  margin-top: 193px;
+  background-color: $cBgGreen;
+  @include sectionBgText(BUSINESS);
+  &::before {
+    top: -27px;
+    color: $cWhite;
+    opacity: 0.18;
+  }
+
+  & .title__sub {
+    color: $cWhite;
+  }
+
+  & .content__title {
+    margin-top: 64px;
+  }
+
+  &__container {
+    padding-top: 228px;
+    padding-bottom: 175px;
+    color: $cWhite;
+  }
+
+  & .container-r {
+    width: fit-content;
+    margin-left: auto;
+  }
+
+  &__content {
+    width: 576px;
+  }
+
+  & .cta {
+    color: $cWhite;
+    border: 3px solid $cWhite;
+  }  
+
+  & .thumbnail-box {
+    &::after {
+      content: "";
+      display: inline-block;
+      height: 480px;
+      width: 660px;
+      position: absolute;    
+      z-index: 10;
+      top: 268px;
+      left: -40px;
+      border: 10px solid $cWhite;
+      border-radius: 0 144px 144px 0;
     }
+  }
+  
+  & .thumbnail {
+    height: 480px;
+    width: 650px;
+    position: absolute;    
+    top: 248px;
+    left: -50px;
+    display: inline-block;    
+    object-fit: cover;
+    border-radius: 0 144px 144px 0;
+  }
 }

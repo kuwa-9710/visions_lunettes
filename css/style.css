@@ -8,6 +8,16 @@ html {
   background-color: #FAF9F7;
 }
 
+.cta {
+  margin-top: 73px;
+  display: inline-block;
+  color: #86AC41;
+  padding: 18px 68px;
+  font-size: 24px;
+  border: 3px solid #86AC41;
+  border-radius: 48px;
+}
+
 .header {
   display: flex;
   flex-direction: row;
@@ -199,10 +209,24 @@ html {
 .title {
   font-size: 48px;
   font-weight: bold;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 .title__sub {
   font-size: 28px;
   color: #86AC41;
+}
+
+.content__title {
+  margin-top: 98px;
+  font-size: 36px;
+  font-weight: bold;
+}
+.content__text {
+  margin-top: 27px;
+  font-size: 24px;
+  line-height: 1.5em;
 }
 
 .about {
@@ -220,27 +244,24 @@ html {
   font-size: 228px;
   white-space: nowrap;
 }
+.about__container .title {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.about__container .title::after {
+  height: 5px;
+  width: 215px;
+  background-color: #86AC41;
+  content: "";
+  position: absolute;
+  left: 110%;
+  top: 50%;
+  transform: translateY(50%);
+}
 .about__content {
   width: 475px;
-}
-.about__content__title {
-  margin-top: 98px;
-  font-size: 36px;
-  font-weight: bold;
-}
-.about__content__text {
-  margin-top: 27px;
-  font-size: 24px;
-  line-height: 1.5em;
-}
-.about__content .cta {
-  margin-top: 73px;
-  display: inline-block;
-  color: #86AC41;
-  padding: 18px 68px;
-  font-size: 24px;
-  border: 3px solid #86AC41;
-  border-radius: 48px;
 }
 .about .thumbnail {
   position: absolute;
@@ -269,9 +290,57 @@ html {
   font-size: 228px;
   white-space: nowrap;
 }
+.business::before {
+  top: -27px;
+  color: #fff;
+  opacity: 0.18;
+}
+.business .title__sub {
+  color: #fff;
+}
+.business .content__title {
+  margin-top: 64px;
+}
 .business__container {
   padding-top: 228px;
+  padding-bottom: 175px;
   color: #fff;
+}
+.business .container-r {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: auto;
+}
+.business__content {
+  width: 576px;
+}
+.business .cta {
+  color: #fff;
+  border: 3px solid #fff;
+}
+.business .thumbnail-box::after {
+  content: "";
+  display: inline-block;
+  height: 480px;
+  width: 660px;
+  position: absolute;
+  z-index: 10;
+  top: 268px;
+  left: -40px;
+  border: 10px solid #fff;
+  border-radius: 0 144px 144px 0;
+}
+.business .thumbnail {
+  height: 480px;
+  width: 650px;
+  position: absolute;
+  top: 248px;
+  left: -50px;
+  display: inline-block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0 144px 144px 0;
 }
 
 .footer {

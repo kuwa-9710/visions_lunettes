@@ -3,27 +3,6 @@
   position: relative;
   @include sectionBgText(ABOUT VISIONS);
 
-  &__container {
-    & .title {
-      position: relative;
-      width: fit-content;
-      &::after {
-        height: 5px;
-        width: 215px;
-        background-color: $cLightGreen;
-        content: "";
-        position: absolute;
-        left: 110%;
-        top: 50%;
-        transform: translateY(50%);
-      }
-    }
-  }
-
-  &__content {
-    width: 475px;
-  }
-
   & .thumbnail {
     position: absolute;
     z-index: 10;

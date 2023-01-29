@@ -8,6 +8,45 @@ html {
   background-color: #FAF9F7;
 }
 
+.content__title {
+  font-size: 48px;
+  font-weight: bold;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+}
+.content__title::after {
+  height: 5px;
+  width: 215px;
+  background-color: #86AC41;
+  content: "";
+  position: absolute;
+  left: 110%;
+  top: 50%;
+  transform: translateY(50%);
+}
+.content__title__sub {
+  display: inline-block;
+  width: 475px;
+  font-size: 28px;
+  color: #86AC41;
+}
+.content__box {
+  width: 475px;
+}
+.content__box__title {
+  margin-top: 98px;
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 1.5em;
+}
+.content__box__text {
+  margin-top: 27px;
+  font-size: 24px;
+  line-height: 1.5em;
+}
+
 .cta {
   margin-top: 73px;
   display: inline-block;
@@ -218,17 +257,6 @@ html {
   color: #86AC41;
 }
 
-.content__title {
-  margin-top: 98px;
-  font-size: 36px;
-  font-weight: bold;
-}
-.content__text {
-  margin-top: 27px;
-  font-size: 24px;
-  line-height: 1.5em;
-}
-
 .about {
   margin-top: 210px;
   position: relative;
@@ -243,25 +271,6 @@ html {
   font-weight: 700;
   font-size: 228px;
   white-space: nowrap;
-}
-.about__container .title {
-  position: relative;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-.about__container .title::after {
-  height: 5px;
-  width: 215px;
-  background-color: #86AC41;
-  content: "";
-  position: absolute;
-  left: 110%;
-  top: 50%;
-  transform: translateY(50%);
-}
-.about__content {
-  width: 475px;
 }
 .about .thumbnail {
   position: absolute;
@@ -295,12 +304,6 @@ html {
   color: #fff;
   opacity: 0.18;
 }
-.business .title__sub {
-  color: #fff;
-}
-.business .content__title {
-  margin-top: 64px;
-}
 .business__container {
   padding-top: 228px;
   padding-bottom: 175px;
@@ -312,8 +315,20 @@ html {
   width: fit-content;
   margin-left: auto;
 }
-.business__content {
+.business .content__title {
+  margin-top: 24px;
+}
+.business .content__title::after {
+  background-color: #fff;
+}
+.business .content__title__sub {
+  color: #fff;
+}
+.business .content__box {
   width: 576px;
+}
+.business .content__box__title {
+  margin-top: 64px;
 }
 .business .cta {
   color: #fff;
@@ -341,6 +356,10 @@ html {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 0 144px 144px 0;
+}
+
+.brand {
+  margin-top: 317px;
 }
 
 .footer {

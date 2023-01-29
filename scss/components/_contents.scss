@@ -1,0 +1,41 @@
+.content {
+  &__title {
+    font-size: 48px;
+    font-weight: bold;
+    width: fit-content;
+    position: relative;
+
+    &::after {
+      height: 5px;
+      width: 215px;
+      background-color: $cLightGreen;
+      content: "";
+      position: absolute;
+      left: 110%;
+      top: 50%;
+      transform: translateY(50%);
+    }
+  }
+
+  &__title__sub {
+    display: inline-block;
+    width: 475px;
+    font-size: 28px;
+    color: $cLightGreen;
+  }
+
+  &__box {
+    width: 475px;
+    &__title {
+      margin-top: 98px;
+      font-size: 36px;
+      font-weight: bold;
+      line-height: 1.5em;
+    }
+    &__text {
+      margin-top: 27px;
+      font-size: 24px;
+      line-height: 1.5em;
+    }
+  }
+}

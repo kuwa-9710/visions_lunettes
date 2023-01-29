@@ -1,4 +1,35 @@
 .brand {
   margin-top: 317px;
-    
+  @include sectionBgText(OUR BRAND);
+
+  & .content__box__title {
+    margin-top: 64px;
+  }
+
+  & .thumbnail-box {
+    &::before {
+      display: block;
+      content: "";
+      background-color: $cGreenTea;
+      height: 452px;
+      width: 647px;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+  }
+
+  & .thumbnail {
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+.brand-name {
+  display: block;
+  font-family: "Allura", cursive;
+  font-size: 79px;
+  margin-top: 64px;
 }

@@ -360,9 +360,47 @@ html {
 
 .brand {
   margin-top: 317px;
+  position: relative;
+}
+.brand::before {
+  position: absolute;
+  z-index: 1;
+  top: -200px;
+  content: "OUR BRAND";
+  opacity: 0.03;
+  font-weight: 700;
+  font-size: 228px;
+  white-space: nowrap;
+}
+.brand .content__box__title {
+  margin-top: 64px;
+}
+.brand .thumbnail-box::before {
+  display: block;
+  content: "";
+  background-color: #C2C29E;
+  height: 452px;
+  width: 647px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.brand .thumbnail {
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.brand-name {
+  display: block;
+  font-family: "Allura", cursive;
+  font-size: 79px;
+  margin-top: 64px;
 }
 
 .footer {
+  margin-top: 123px;
   height: 300px;
   color: #fff;
   background-color: #666666;

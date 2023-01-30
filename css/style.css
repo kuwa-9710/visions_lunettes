@@ -417,8 +417,49 @@ html {
   margin-top: 64px;
 }
 
+.recruit {
+  margin-top: 124px;
+  text-align: center;
+  background-image: url(/image/bg-recruit.jpg);
+  background-position: center;
+  background-size: 1440px;
+  background-repeat: no-repeat;
+  filter: rgba(128, 128, 128, 0.1529411765);
+}
+.recruit .title {
+  padding-top: 64px;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+}
+.recruit .title__sub {
+  color: #42D76C;
+}
+.recruit__text {
+  padding-top: 28px;
+  font-size: 29px;
+  font-weight: bold;
+  line-height: 1.5em;
+  color: #fff;
+}
+.recruit .buttons {
+  width: 567px;
+  margin: 0 auto;
+  padding: 69px 0 114px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.recruit__cta {
+  color: #fff;
+  display: inline-block;
+  border-radius: 95px;
+  font-size: 24px;
+  background-color: #42D76C;
+  padding: 18px 68px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1450980392);
+}
+
 .footer {
-  margin-top: 123px;
   height: 300px;
   color: #fff;
   background-color: #666666;

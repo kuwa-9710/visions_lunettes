@@ -1,0 +1,46 @@
+.recruit {
+    margin-top: 124px;
+  text-align: center;
+  background-image: url(/image/bg-recruit.jpg);
+  background-position: center;
+  background-size: 1440px;
+  background-repeat: no-repeat;
+  filter: #80808027;
+
+  & .title {
+    padding-top: 64px;
+    color: $cWhite;    
+    text-align: center;
+    width: 100%;
+  }
+
+  & .title__sub {
+    color: $cRecruitButton;
+  }
+  
+  &__text {
+    padding-top: 28px;
+    font-size: 29px;
+    font-weight: bold;
+    line-height: 1.5em;
+    color: $cWhite;
+  }
+
+  & .buttons {
+    width: 567px;
+    margin: 0 auto;
+    padding: 69px 0 114px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__cta {
+    color: $cWhite;
+    display: inline-block;
+    border-radius: 95px;
+    font-size: 24px;
+    background-color: $cRecruitButton;
+    padding: 18px 68px;
+    box-shadow: 0 4px 4px #00000025;
+  }
+}

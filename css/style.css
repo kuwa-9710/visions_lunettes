@@ -164,6 +164,12 @@ html {
   content: "Visionsはメガネを通して社会のサステナビリティを向上させます";
 }
 
+.grasses {
+  position: absolute;
+  top: 244px;
+  left: 112px;
+}
+
 .container {
   max-width: 1100px;
   margin: 0 auto;
@@ -284,6 +290,12 @@ html {
      object-fit: cover;
 }
 
+.leaf {
+  position: absolute;
+  top: 529px;
+  left: 461px;
+}
+
 .business {
   margin-top: 193px;
   background-color: #86AC41;
@@ -356,6 +368,12 @@ html {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 0 144px 144px 0;
+}
+
+.leaf-white {
+  position: absolute;
+  top: 617px;
+  right: 78px;
 }
 
 .brand {

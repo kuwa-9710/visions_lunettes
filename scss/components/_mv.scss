@@ -2,7 +2,7 @@ $titleTop: 347px;
 $titleLeft: -165px;
 
 .mv {  
-  height: 900px;
+  height: 900px;  
 
   &__content {
     height: 800px;
@@ -66,4 +66,10 @@ $titleLeft: -165px;
       content: "Visionsはメガネを通して社会のサステナビリティを向上させます";
     }
   }
+}
+
+.grasses {
+  position: absolute;
+  top: 244px;
+  left: 112px;
 }

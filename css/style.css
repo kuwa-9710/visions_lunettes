@@ -63,11 +63,12 @@ html {
 .header {
   display: flex;
   flex-direction: row;
-  padding: 12px 61px 12px 112px;
+  justify-content: space-between;
+  align-items: center;
   position: fixed;
+  height: 60px;
   z-index: 9999;
   width: 100%;
-  top: 0;
   transition: all 0.3s ease;
 }
 .header.change-color {
@@ -81,11 +82,15 @@ html {
 .header__title {
   font-weight: bold;
   font-size: 32px;
+  padding-left: 112px;
 }
 .header__nav {
-  flex-grow: 1;
+  padding-left: 45px;
+  padding-right: 45px;
+  width: 65vw;
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
 }
 .header__menu {
@@ -95,21 +100,180 @@ html {
 }
 .header__menu li {
   margin-right: 45px;
+  font-size: 16px;
 }
 .header__button {
-  padding: 12px 46px;
+  padding: 15px 15px 15px 28px;
   border-radius: 38px;
   font-weight: bold;
   color: #fff;
-  background-color: #67C308;
+  background-color: #67c308;
+  display: flex;
+  gap: 10px;
+}
+.header__button svg {
+  width: 20px;
+  height: 17px;
+}
+.header__button .online-shop {
+  font-size: 16px;
+}
+.header__nav__button {
+  display: none;
 }
 
+@media screen and (max-width: 1360px) {
+  .header__menu li {
+    margin-right: 40px;
+  }
+}
+@media screen and (max-width: 1317px) {
+  .header__menu li {
+    margin-right: 30px;
+  }
+}
+@media screen and (max-width: 1239px) {
+  .header__nav {
+    padding-left: 30px;
+  }
+  .header__menu li {
+    margin-right: 20px;
+  }
+}
+@media screen and (max-width: 1143px) {
+  .header__nav {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .header__menu li {
+    margin-right: 16px;
+  }
+  .header__button {
+    gap: 5px;
+  }
+}
+/***************************************************
+ media:tab
+***************************************************/
+@media screen and (max-width: 1024px) {
+  .header {
+    /***************************************************
+    ナビゲーションメニュー
+    ***************************************************/
+    /***************************************************
+    ナビゲーションボタン 
+    ***************************************************/
+  }
+  .header__title {
+    padding-left: 70px;
+    color: #fff;
+  }
+  .header__menu {
+    position: absolute;
+    top: 0;
+    left: 120%;
+    z-index: 999;
+    background-color: #86AC41;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    transition: all ease 0.5s;
+  }
+  .header__menu.active {
+    top: 0;
+    left: 0;
+  }
+  .header__menu::before {
+    color: #fff;
+    content: "Visions";
+    font-size: 32px;
+    font-weight: bold;
+  }
+  .header__menu li {
+    color: #fff;
+  }
+  .header__button {
+    padding: 0;
+    border-radius: 0;
+    width: 70px;
+    height: 60px;
+    display: grid;
+    place-items: center;
+    position: absolute;
+    z-index: 9999;
+    right: 60px;
+  }
+  .header__button svg {
+    height: 33px;
+    width: 33px;
+  }
+  .header__button .online-shop,
+.header__button .angle {
+    display: none;
+  }
+  .header__nav__button {
+    display: inline-block;
+    background-color: #fff;
+    position: absolute;
+    z-index: 9999;
+    top: 0;
+    right: 0;
+    height: 60px;
+    width: 60px;
+    cursor: pointer;
+    transition: all ease 0.3s;
+  }
+  .header__nav__button span {
+    height: 4px;
+    width: 35px;
+    position: absolute;
+    background-color: #86AC41;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all ease 0.3s;
+  }
+  .header__nav__button span:nth-child(1) {
+    top: 18px;
+  }
+  .header__nav__button span:nth-child(2) {
+    top: 28px;
+  }
+  .header__nav__button span:nth-child(3) {
+    top: 38px;
+  }
+  .header__nav__button.active span:nth-child(1) {
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+  }
+  .header__nav__button.active span:nth-child(2) {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  .header__nav__button.active span:nth-child(3) {
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) rotate(-45deg);
+  }
+}
+/***************************************************
+ media:sp
+***************************************************/
+@media screen and (max-width: 599px) {
+  .header__title {
+    padding-left: 20px;
+  }
+}
 .mv {
   height: 900px;
 }
 .mv__content {
   height: 800px;
-  width: 919px;
+  width: 65vw;
   position: absolute;
   top: 0;
   right: 0;
@@ -136,10 +300,11 @@ html {
 }
 .mv .bg-image {
   background-image: url("/image/bg-mv.jpg");
-  background-size: 924px;
+  background-size: cover;
+  background-repeat: no-repeat;
   border-radius: 0 0 0 273px;
   height: 800px;
-  width: 919px;
+  width: 65vw;
   position: absolute;
   z-index: 10;
   top: 0;
@@ -170,9 +335,12 @@ html {
 .grasses {
   position: absolute;
   top: 244px;
-  left: 112px;
+  left: -412px;
 }
 
+/***************************************************
+ tab
+***************************************************/
 .container {
   max-width: 1100px;
   margin: 0 auto;

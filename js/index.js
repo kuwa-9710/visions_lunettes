@@ -20,3 +20,10 @@ $(function () {
     }
   });
 });
+
+$(function () {
+  $(".header__nav__button").on("click", function () {
+    $(".header__nav__button").toggleClass("active");
+    $(".header__menu").toggleClass("active");
+  });
+});

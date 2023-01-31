@@ -1,17 +1,17 @@
-.header {    
+.header {
   display: flex;
   flex-direction: row;
-  padding: 12px 61px 12px 112px;
+  justify-content: space-between;
+  align-items: center;
   position: fixed;
+  height: 60px;
   z-index: 9999;
   width: 100%;
-  top: 0;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 
   &.change-color {
     color: $cBlack;
     backdrop-filter: blur(10px);
-
     & .header__menu {
       color: $cBlack;
     }
@@ -20,29 +20,230 @@
   &__title {
     font-weight: bold;
     font-size: 32px;
+    padding-left: 112px;
   }
 
   &__nav {
-    flex-grow: 1;
+    padding-left: 45px;
+    padding-right: 45px;
+    width: 65vw;
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
   }
 
   &__menu {
-    display: flex;    
+    display: flex;
     flex-direction: row;
     color: $cWhite;
     & li {
-        margin-right: 45px;
+      margin-right: 45px;
+      font-size: 16px;
     }
   }
 
   &__button {
-    padding: 12px 46px;
+    padding: 15px 15px 15px 28px;
     border-radius: 38px;
     font-weight: bold;
     color: $cWhite;
-    background-color: #67C308;
+    background-color: #67c308;
+    display: flex;
+    gap: 10px;
+    & svg {
+      width: 20px;
+      height: 17px;
+    }
+    & .online-shop {
+      font-size: 16px;
+    }
+  }
+
+  &__nav__button {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1360px) {
+  .header {
+    &__menu {
+      & li {
+        margin-right: 40px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1317px) {
+  .header {
+    &__menu {
+      & li {
+        margin-right: 30px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1239px) {
+  .header {
+    &__nav {
+      padding-left: 30px;
+    }
+    &__menu {
+      & li {
+        margin-right: 20px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1143px) {
+  .header {
+    &__nav {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+    &__menu {
+      & li {
+        margin-right: 16px;
+      }
+    }
+    &__button {
+      gap: 5px;
+    }
+  }
+}
+
+/***************************************************
+ media:tab
+***************************************************/
+@include media(tab) {
+  .header {
+    &__title {
+      padding-left: 70px;
+      color: $cWhite;
+    }
+
+    /***************************************************
+    ナビゲーションメニュー
+    ***************************************************/
+    &__menu {      
+      position: absolute;
+      top: 0;
+      left: 120%;
+      z-index: 999;
+      background-color: $cBgGreen;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      transition: all ease .5s;
+      
+      // activeクラス付与時
+      &.active {
+        top: 0;
+        left: 0;
+      }
+      
+      &::before {
+        color: $cWhite;
+        content: "Visions";
+        font-size: 32px;
+        font-weight: bold;        
+      }
+
+      & li {
+        color: $cWhite;
+      }
+    }
+
+    &__button {
+      padding: 0;
+      border-radius: 0;
+      width: 70px;
+      height: 60px;
+      display: grid;
+      place-items: center;
+      position: absolute;
+      z-index: 9999;
+      right: 60px;
+      & svg {
+        height: 33px;
+        width: 33px;
+      }
+      & .online-shop,
+      .angle {
+        display: none;
+      }
+    }
+
+    /***************************************************
+    ナビゲーションボタン 
+    ***************************************************/
+    &__nav__button {
+      display: inline-block;
+      background-color: $cWhite;
+      position: absolute;
+      z-index: 9999;
+      top: 0;
+      right: 0;
+      height: 60px;
+      width: 60px;
+      cursor: pointer;
+      transition: all ease 0.3s;
+
+      & span {
+        height: 4px;
+        width: 35px;
+        position: absolute;
+        background-color: $cBgGreen;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: all ease 0.3s;
+
+        &:nth-child(1) {
+          top: 18px;
+        }
+        &:nth-child(2) {
+          top: 28px;
+        }
+        &:nth-child(3) {
+          top: 38px;
+        }
+      }
+
+      // activeクラスが付与された時
+      &.active {
+        & span {
+          &:nth-child(1) {
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) rotate(45deg);
+          }
+          &:nth-child(2) {
+            transform: translateX(-100%);
+            opacity: 0;
+          }
+          &:nth-child(3) {
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) rotate(-45deg);
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/***************************************************
+ media:sp
+***************************************************/
+@include media(sp) {
+  .header {
+    &__title {
+      padding-left: 20px;
+    }
   }
 }

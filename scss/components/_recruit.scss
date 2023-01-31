@@ -1,5 +1,5 @@
 .recruit {
-    margin-top: 124px;
+  margin-top: 124px;
   text-align: center;
   background-image: url(/image/bg-recruit.jpg);
   background-position: center;
@@ -9,7 +9,7 @@
 
   & .title {
     padding-top: 64px;
-    color: $cWhite;    
+    color: $cWhite;
     text-align: center;
     width: 100%;
   }
@@ -17,7 +17,7 @@
   & .title__sub {
     color: $cRecruitButton;
   }
-  
+
   &__text {
     padding-top: 28px;
     font-size: 29px;

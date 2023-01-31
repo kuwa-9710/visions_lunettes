@@ -1,12 +1,13 @@
 $titleTop: 347px;
 $titleLeft: -165px;
+$mv-content-width: 65vw;
+$mv-content-height: 800px;
 
 .mv {  
   height: 900px;  
-
   &__content {
-    height: 800px;
-    width: 919px;
+    height: $mv-content-height;
+    width: $mv-content-width;
     position: absolute;
     top: 0;
     right: 0;
@@ -34,11 +35,12 @@ $titleLeft: -165px;
   }
 
   & .bg-image {
-    background-image: url("/image/bg-mv.jpg");
-    background-size: 924px;
+    background-image: url("/image/bg-mv.jpg");    
+    background-size: cover;
+    background-repeat: no-repeat;    
     border-radius: 0 0 0 273px;
-    height: 800px;
-    width: 919px;
+    height: $mv-content-height;
+    width: $mv-content-width;
     position: absolute;
     z-index: 10;
     top: 0;
@@ -71,5 +73,12 @@ $titleLeft: -165px;
 .grasses {
   position: absolute;
   top: 244px;
-  left: 112px;
+  left: -412px;
+}
+
+/***************************************************
+ tab
+***************************************************/
+@include media(tab) {
+
 }

@@ -17,8 +17,42 @@
 
 .leaf {
   position: absolute;
-  top: 529px;
-  left: 461px;
+  top: 344px;
+  left: 296px;
+}
+
+/***************************************************
+ tab
+***************************************************/
+@include media(tab) {
+  .about {
+    display: grid;
+    gap: 64px;
+
+    & .container {
+      max-width: 650px;
+    }
+
+    &__title {
+      width: 100%;
+    }
+
+    &__container {
+    }
+
+    & .thumbnail {
+      position: relative;
+      margin-left: auto;
+      object-position: center;
+      width: 100%;
+      height: 300px;
+      grid-row: 2/2;
+    }
+  }
+
+  .leaf {
+    top: 305px;
+  }
 }
 
 /***************************************************
@@ -27,23 +61,15 @@
 @include media(sp) {
   .about {
     margin-top: 86px;
-
+    gap: 12px;
     & .thumbnail {
-      top: 95px;
-      right: 50%;
-      transform: translateX(50%);
-      height: auto;
-      width: calc(100vw - 40px);
+      padding: 0 20px;
+      height: 240px;
     }
+  }
 
-    & .content {
-      &__title::after {
-        display: none;
-      }
-
-      &__box__title {
-        margin-top: 289px;
-      }
-    }
+  .leaf {
+    top: 194px;
+    left: 270px;
   }
 }

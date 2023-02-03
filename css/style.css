@@ -36,6 +36,7 @@ html {
   color: #86AC41;
 }
 .content__box {
+  position: relative;
   width: 475px;
 }
 .content__box__title {
@@ -51,6 +52,23 @@ html {
 }
 
 /***************************************************
+ tab
+***************************************************/
+@media screen and (max-width: 1024px) {
+  .content__title__sub {
+    width: 100%;
+  }
+  .content__title::after {
+    display: none;
+  }
+  .content__box {
+    width: 100%;
+  }
+  .content__box__title {
+    margin-top: 0;
+  }
+}
+/***************************************************
  sp
 ***************************************************/
 @media screen and (max-width: 599px) {
@@ -64,12 +82,30 @@ html {
     width: 100%;
   }
   .content__box__title {
-    font-size: 24px;
+    font-size: 32px;
   }
   .content__box__text {
     margin-top: 16px;
-    font-size: 16px;
+    font-size: 20px;
     line-height: 1.5em;
+  }
+}
+/***************************************************
+ 424px
+***************************************************/
+@media screen and (max-width: 424px) {
+  .content__title {
+    font-size: 32px;
+  }
+  .content__box__title {
+    font-size: 24px;
+    margin-top: 24px;
+    letter-spacing: 0.5px;
+  }
+  .content__box__text {
+    font-size: 16px;
+    margin-top: 11px;
+    letter-spacing: 0.5px;
   }
 }
 .cta {
@@ -121,8 +157,8 @@ html {
   padding-left: 112px;
 }
 .header__nav {
-  padding-left: 45px;
-  padding-right: 45px;
+  padding-left: 38px;
+  padding-right: 38px;
   width: 63vw;
   display: flex;
   flex-direction: row;
@@ -135,7 +171,7 @@ html {
   color: #fff;
 }
 .header__menu li {
-  margin-right: 45px;
+  margin-right: 40px;
   font-size: 16px;
 }
 .header__button {
@@ -163,7 +199,7 @@ html {
 ***************************************************/
 @media screen and (max-width: 1360px) {
   .header__menu li {
-    margin-right: 40px;
+    margin-right: 32px;
   }
 }
 /***************************************************
@@ -171,7 +207,7 @@ html {
 ***************************************************/
 @media screen and (max-width: 1317px) {
   .header__menu li {
-    margin-right: 30px;
+    margin-right: 28px;
   }
 }
 /***************************************************
@@ -182,7 +218,7 @@ html {
     padding-left: 30px;
   }
   .header__menu li {
-    margin-right: 20px;
+    margin-right: 16px;
   }
 }
 /***************************************************
@@ -198,6 +234,14 @@ html {
   }
   .header__button {
     gap: 5px;
+  }
+}
+/***************************************************
+ 1057px
+***************************************************/
+@media screen and (max-width: 1057px) {
+  .header__menu li {
+    margin-right: 12px;
   }
 }
 /***************************************************
@@ -530,7 +574,7 @@ html {
     576px
   ***************************************************/
 }
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1024px) {
   .container {
     max-width: 960px;
   }
@@ -553,6 +597,9 @@ html {
 .news {
   position: relative;
   /***************************************************
+   tab
+  ***************************************************/
+  /***************************************************
    sp
   ***************************************************/
   overflow: visible;
@@ -566,6 +613,12 @@ html {
   font-weight: 700;
   font-size: 228px;
   white-space: nowrap;
+}
+@media screen and (max-width: 1024px) {
+  .news::before {
+    font-size: 120px;
+    top: -85px;
+  }
 }
 @media screen and (max-width: 599px) {
   .news::before {
@@ -644,6 +697,14 @@ html {
   }
 }
 /***************************************************
+ tab
+***************************************************/
+@media screen and (max-width: 1024px) {
+  .news {
+    margin-top: 88px;
+  }
+}
+/***************************************************
  sp
 ***************************************************/
 @media screen and (max-width: 599px) {
@@ -669,7 +730,7 @@ html {
 ***************************************************/
 @media screen and (max-width: 599px) {
   .title {
-    font-size: 36px;
+    font-size: 32px;
   }
   .title__sub {
     font-size: 16px;
@@ -679,6 +740,9 @@ html {
   margin-top: 210px;
   position: relative;
   position: relative;
+  /***************************************************
+   tab
+  ***************************************************/
   /***************************************************
    sp
   ***************************************************/
@@ -692,6 +756,12 @@ html {
   font-weight: 700;
   font-size: 228px;
   white-space: nowrap;
+}
+@media screen and (max-width: 1024px) {
+  .about::before {
+    font-size: 120px;
+    top: -85px;
+  }
 }
 @media screen and (max-width: 599px) {
   .about::before {
@@ -713,35 +783,61 @@ html {
 
 .leaf {
   position: absolute;
-  top: 529px;
-  left: 461px;
+  top: 344px;
+  left: 296px;
 }
 
+/***************************************************
+ tab
+***************************************************/
+@media screen and (max-width: 1024px) {
+  .about {
+    display: grid;
+    gap: 64px;
+  }
+  .about .container {
+    max-width: 650px;
+  }
+  .about__title {
+    width: 100%;
+  }
+  .about .thumbnail {
+    position: relative;
+    margin-left: auto;
+    -o-object-position: center;
+       object-position: center;
+    width: 100%;
+    height: 300px;
+    grid-row: 2/2;
+  }
+  .leaf {
+    top: 305px;
+  }
+}
 /***************************************************
  sp
 ***************************************************/
 @media screen and (max-width: 599px) {
   .about {
     margin-top: 86px;
+    gap: 12px;
   }
   .about .thumbnail {
-    top: 95px;
-    right: 50%;
-    transform: translateX(50%);
-    height: auto;
-    width: calc(100vw - 40px);
+    padding: 0 20px;
+    height: 240px;
   }
-  .about .content__title::after {
-    display: none;
-  }
-  .about .content__box__title {
-    margin-top: 289px;
+  .leaf {
+    top: 194px;
+    left: 270px;
   }
 }
 .business {
   margin-top: 193px;
   background-color: #86AC41;
   position: relative;
+  /***************************************************
+   tab
+  ***************************************************/
   /***************************************************
    sp
   ***************************************************/
@@ -755,6 +851,12 @@ html {
   font-weight: 700;
   font-size: 228px;
   white-space: nowrap;
+}
+@media screen and (max-width: 1024px) {
+  .business::before {
+    font-size: 120px;
+    top: -85px;
+  }
 }
 @media screen and (max-width: 599px) {
   .business::before {
@@ -839,6 +941,9 @@ html {
   margin-top: 317px;
   position: relative;
   /***************************************************
+   tab
+  ***************************************************/
+  /***************************************************
    sp
   ***************************************************/
 }
@@ -851,6 +956,12 @@ html {
   font-weight: 700;
   font-size: 228px;
   white-space: nowrap;
+}
+@media screen and (max-width: 1024px) {
+  .brand::before {
+    font-size: 120px;
+    top: -85px;
+  }
 }
 @media screen and (max-width: 599px) {
   .brand::before {

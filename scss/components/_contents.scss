@@ -25,6 +25,7 @@
   }
 
   &__box {
+    position: relative;
     width: 475px;
     &__title {
       margin-top: 98px;
@@ -41,6 +42,28 @@
 }
 
 /***************************************************
+ tab
+***************************************************/
+@include media(tab) {
+  .content {
+    &__title {      
+      &__sub {
+        width: 100%;
+      }
+      &::after {
+        display: none;
+      }
+    }
+    &__box {
+      width: 100%;
+      &__title {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+/***************************************************
  sp
 ***************************************************/
 @include media(sp) {
@@ -49,17 +72,40 @@
       font-size: 36px;
       &__sub {
         font-size: 16px;
-      }
+      }      
     }
     &__box {
       width: 100%;
       &__title {
-        font-size: 24px;        
+        font-size: 32px;        
       }
       &__text {
         margin-top: 16px;
-        font-size: 16px;
+        font-size: 20px;
         line-height: 1.5em;
+      }
+    }
+  }
+}
+
+/***************************************************
+ 424px
+***************************************************/
+@media screen and (max-width: 424px) {
+  .content {
+    &__title {
+      font-size: 32px;
+    }
+    &__box {
+      &__title {
+        font-size: 24px;
+        margin-top: 24px;
+        letter-spacing: 0.5px;
+      }
+      &__text {
+        font-size: 16px;   
+        margin-top: 11px;   
+        letter-spacing: 0.5px;  
       }
     }
   }

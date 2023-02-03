@@ -575,8 +575,7 @@ html {
 }
 .news .container {
   overflow: visible;
-  padding: 0;
-  margin: 0 20px;
+  padding: 0 20px;
 }
 .news .swiper {
   overflow: visible;

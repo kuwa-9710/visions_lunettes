@@ -123,7 +123,7 @@ html {
 .header__nav {
   padding-left: 45px;
   padding-right: 45px;
-  width: 65vw;
+  width: 63vw;
   display: flex;
   flex-direction: row;
   justify-content: space-between;

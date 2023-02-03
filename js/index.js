@@ -1,12 +1,31 @@
 // Swiperの初期化
 const swiper = new Swiper(".swiper", {
-  slidesPerView: "auto",
-  spaceBetween: 16,
+  slidesPerView: 1,
+  spaceBetween: 44,
   grabCursor: true,
-  breakpoints: {
-    1025: {
+  
+  breakpoints: {  
+    350: {
+      slidesPerView: 1.2,
+    },
+    450: {
+      slidesPerView: 1.5
+    },
+    600: {
+      slidesPerView: 2,
       spaceBetween: 32,
     },
+    700: {
+      slidesPerView: 2.5,
+      spaceBetween: 16,
+    },
+    900: {
+      slidesPerView: 2.8,
+    },
+    1025: {
+      slidesPerView: "auto",
+      spaceBetween: 55,
+    }
   },
 });
 

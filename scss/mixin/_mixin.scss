@@ -9,6 +9,15 @@
     font-weight: 700;
     font-size: 228px;
     white-space: nowrap;
-    // animation: animate-bg-text 20s linear infinite;
+  }
+
+  /***************************************************
+   sp
+  ***************************************************/
+  @include media(sp) {
+    &::before {
+      font-size: 80px;
+      top: -48px;
+    }
   }
 }

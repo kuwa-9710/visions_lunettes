@@ -1,6 +1,6 @@
-$titleTop: 347px;
+$titleTop: 353px;
 $titleLeft: -165px;
-$mv-content-width: 65vw;
+$mv-content-width: 63vw;
 $mv-content-height: 800px;
 
 .mv {
@@ -19,17 +19,18 @@ $mv-content-height: 800px;
     letter-spacing: 2px;
     font-weight: bold;
     position: absolute;
-    left: -300px;
-    top: 347px;
+    left: -343px;
+    top: 353px;
   }
 
   &__sub {
     font-size: 24px;
     font-weight: bold;
     position: absolute;
-    left: -300px;
-    top: 411px;
+    left: -334px;
+    top: 432px;
     margin-top: 8px;
+    letter-spacing: 1px;
   }
 
   & .bg-image {
@@ -50,8 +51,8 @@ $mv-content-height: 800px;
       letter-spacing: 2px;
       font-weight: bold;
       position: absolute;
-      left: -300px;
-      top: 347px;
+      left: -343px;
+      top: 353px;
       color: $cWhite;
       content: "目元から環境に優しく";
       z-index: 1;
@@ -60,8 +61,9 @@ $mv-content-height: 800px;
       font-size: 24px;
       font-weight: bold;
       position: absolute;
-      left: -300px;
-      top: 419px;
+      left: -337px;
+      top: 441px;
+      letter-spacing: 1px;
       color: $cWhite;
       z-index: 1;
       content: "Visionsはメガネを通して社会のサステナビリティを向上させます";
@@ -137,6 +139,7 @@ $mv-content-height: 800px;
   $mv-content-width: 100vw;
 
   .mv {
+    height: $mv-content-height;
     &__content {
       height: $mv-content-height;
       width: $mv-content-width;
@@ -195,7 +198,12 @@ $mv-content-height: 800px;
       top: 510px;
       left: 20px;
       padding-right: 20px;
-    }    
+    }
+
+    & .bg-image {
+      background-size: cover;
+      background-position: center;
+    }
   }
 
   .br-sp {

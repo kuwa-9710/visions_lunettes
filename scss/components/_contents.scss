@@ -39,3 +39,28 @@
     }
   }
 }
+
+/***************************************************
+ sp
+***************************************************/
+@include media(sp) {
+  .content {
+    &__title {
+      font-size: 36px;
+      &__sub {
+        font-size: 16px;
+      }
+    }
+    &__box {
+      width: 100%;
+      &__title {
+        font-size: 24px;        
+      }
+      &__text {
+        margin-top: 16px;
+        font-size: 16px;
+        line-height: 1.5em;
+      }
+    }
+  }
+}

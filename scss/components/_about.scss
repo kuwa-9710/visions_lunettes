@@ -20,3 +20,30 @@
   top: 529px;
   left: 461px;
 }
+
+/***************************************************
+ sp
+***************************************************/
+@include media(sp) {
+  .about {
+    margin-top: 86px;
+
+    & .thumbnail {
+      top: 95px;
+      right: 50%;
+      transform: translateX(50%);
+      height: auto;
+      width: calc(100vw - 40px);
+    }
+
+    & .content {
+      &__title::after {
+        display: none;
+      }
+
+      &__box__title {
+        margin-top: 289px;
+      }
+    }
+  }
+}

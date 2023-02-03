@@ -1,9 +1,23 @@
 .cta {
   margin-top: 73px;
-  display: inline-block;
+  display: block;
+  width: fit-content;
   color: $cLightGreen;
   padding: 18px 68px;
   font-size: 24px;
   border: 3px solid $cLightGreen;
   border-radius: 48px;
+}
+
+/***************************************************
+ sp
+***************************************************/
+@include media(sp) {
+  .cta {
+    margin: 0 auto;
+    margin-top: 30px;
+    padding: 11px 40px;
+    font-size: 14px;
+
+  }
 }

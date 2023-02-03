@@ -3,7 +3,20 @@
   font-weight: bold;
   width: fit-content;
   &__sub {
+    display: inline-block;
     font-size: 28px;
     color: $cLightGreen;
+  }
+}
+
+/***************************************************
+ sp
+***************************************************/
+@include media(sp) {
+  .title {
+    font-size: 36px;
+    &__sub {
+      font-size: 16px;
+    }
   }
 }

@@ -1,23 +1,36 @@
 .news {
   @include sectionBgText(VISIONS NEWS);
+  overflow: visible;
 
   .container {
+    overflow: visible;
+    padding: 0;
+    margin: 0 20px;
+  }
+
+  .swiper {
     overflow: visible;
   }
 
   &__list {
-    padding-top: 30px;
+    padding-top: 30px;    
     &__item {
       width: 296px;
       margin-right: 55px;
+      transition: all ease .3s;
       &:last-child {
         margin-right: 0;
+      }
+      &:hover {
+        transform: scale(1.05);
+        cursor: pointer;
       }
     }
     &__image {
       height: 227px;
       width: 100%;
       border-radius: 13px;
+      object-fit: cover;
     }
     &__info {
       padding-top: 16px;
@@ -52,5 +65,14 @@
   }
   100% {
     transform: translateX(-100%);
+  }
+}
+
+/***************************************************
+ sp
+***************************************************/
+@include media(sp) {
+  .news {
+    margin-top: 72px;
   }
 }

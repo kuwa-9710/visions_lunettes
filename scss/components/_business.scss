@@ -1,15 +1,26 @@
 .business {
-  margin-top: 193px;
+  margin-top: 245px;
   background-color: $cBgGreen;
   @include sectionBgText(BUSINESS);
+  display: grid;
+  grid-template-columns: 48vw 50vw;
+
   &::before {
     top: -27px;
     color: $cWhite;
     opacity: 0.18;
   }
 
+  &__title {
+    padding: 0;
+    margin-top: 229px;
+    letter-spacing: 1px;
+    display: block;
+    width: 100%;
+  }
+
   &__container {
-    padding-top: 228px;
+    grid-column: 2/3;    
     padding-bottom: 175px;
     color: $cWhite;
   }
@@ -22,18 +33,25 @@
   // _content.scss
   & .content {
     &__title {
-      margin-top: 24px;
+      display: block;
+      color: $cWhite;
       &::after {
         background-color: $cWhite;
       }
       &__sub {
+        display: block;
         color: $cWhite;
+        margin-top: 13px;
       }
     }
     &__box {
-      width: 576px;
-      &__title {
+      width: auto;      
+      &__title {        
         margin-top: 64px;
+        letter-spacing: 1px;
+      }
+      &__text {
+        letter-spacing: 0.7px;
       }
     }
   }
@@ -45,14 +63,16 @@
   }
 
   & .thumbnail-box {
+    grid-row: 1/3;
+
     &::after {
       content: "";
       display: inline-block;
-      height: 480px;
-      width: 660px;
+      height: 482px;
+      width: 45vw;
       position: absolute;
       z-index: 10;
-      top: 268px;
+      top: 277px;
       left: -40px;
       border: 10px solid $cWhite;
       border-radius: 0 144px 144px 0;
@@ -60,11 +80,10 @@
   }
 
   & .thumbnail {
-    height: 480px;
-    width: 650px;
-    position: absolute;
-    top: 248px;
-    left: -50px;
+    height: 478px;
+    width: 40.5vw;
+    position: relative;
+    margin-top: 256px;
     display: inline-block;
     object-fit: cover;
     border-radius: 0 144px 144px 0;
@@ -76,12 +95,85 @@
   top: 617px;
   right: 78px;
 }
+/***************************************************
+ tab
+***************************************************/
+@include media(tab) {
+  .business {
+    grid-template-columns: auto;
+    margin-top: 136px;
+    gap: 64px;
 
+    & .container {
+      max-width: 650px;
+    }
+
+    &__title {
+      padding: 0 20px;
+      grid-row: 1/2;
+      margin-top: 65px;
+    }
+
+    &__container {
+      grid-column: 1/2;
+      grid-row: 3/4;
+    }
+
+    & .content__box {
+      padding: 0 20px;
+      margin: 0 auto;
+      &__title {
+        margin-top: 0;
+      }
+    }
+
+    & .thumbnail-box {
+      width: 100vw;
+      grid-row: 2/3;
+      grid-column: 1/2;
+
+      &::after {
+        display: none;
+      }
+    }
+
+    & .thumbnail {
+      width: 100%;      
+      height: 300px;
+      border-radius: 0;
+      margin-top: 0;
+    }
+    
+    & .leaf-white {
+      top: 313px;
+      right: 28px;
+      height: 144px;
+    }
+  }
+}
 /***************************************************
  sp
 ***************************************************/
 @include media(sp) {
   .business {
     margin-top: 64px;
+    gap: 12px;
+
+    &::before {
+      top: 13px;
+    }
+
+    &__container {
+      padding-bottom: 80px;
+    }
+
+    & .thumbnail {
+      padding: 0 20px;
+      height: 240px;
+    }
+
+    & .leaf-white {
+      display: none;
+    }
   }
 }

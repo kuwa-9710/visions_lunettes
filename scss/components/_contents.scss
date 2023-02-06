@@ -27,6 +27,7 @@
   &__box {
     position: relative;
     width: 475px;
+    max-width: 576px;
     &__title {
       margin-top: 98px;
       font-size: 36px;

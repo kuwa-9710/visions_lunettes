@@ -1184,4 +1184,28 @@ html {
   bottom: 30px;
   left: 50%;
   transform: translateX(-50%);
+}
+
+/***************************************************
+ sp
+***************************************************/
+@media screen and (max-width: 599px) {
+  .footer {
+    height: 614px;
+  }
+  .footer__container {
+    flex-direction: column;
+    gap: 40px;
+    padding-bottom: 75px;
+  }
+  .footer__l {
+    text-align: center;
+  }
+  .footer__menu {
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 31px;
+    text-align: center;
+  }
 }/*# sourceMappingURL=style.css.map */

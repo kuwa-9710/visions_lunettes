@@ -58,3 +58,33 @@
     transform: translateX(-50%);
   }
 }
+
+/***************************************************
+ sp
+***************************************************/
+@include media(sp) {
+  .footer {
+    height: 614px;
+    &__container {
+      flex-direction: column;
+      gap: 40px;
+      padding-bottom: 75px;
+    }
+
+    &__l {
+      text-align: center;
+    }
+
+    &__menu {
+      font-size: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 31px;
+      text-align: center;      
+    }
+  }
+
+  & .copyrights {
+    bottom: 23px;
+  }
+}

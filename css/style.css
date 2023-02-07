@@ -264,6 +264,9 @@ html {
     padding-left: 70px;
     color: #fff;
   }
+  .header.change-color .header__title {
+    color: #333333;
+  }
   .header__menu {
     position: absolute;
     top: 0;
@@ -811,7 +814,7 @@ html {
     gap: 64px;
   }
   .about .container {
-    max-width: 650px;
+    max-width: 615px;
   }
   .about__title {
     width: 100%;
@@ -973,7 +976,7 @@ html {
     gap: 64px;
   }
   .business .container {
-    max-width: 650px;
+    max-width: 615px;
   }
   .business__title {
     padding: 0 20px;

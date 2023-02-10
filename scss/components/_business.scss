@@ -93,8 +93,8 @@
 
 .leaf-white {
   position: absolute;
-  top: 617px;
-  right: 78px;
+  top: 237px;
+  right: -98px;
 }
 /***************************************************
  tab
@@ -123,6 +123,7 @@
     & .content__box {
       padding: 0 20px;
       margin: 0 auto;
+      max-width: 615px;
       &__title {
         margin-top: 0;
       }
@@ -158,7 +159,7 @@
 @include media(sp) {
   .business {
     margin-top: 64px;
-    gap: 12px;
+    gap: 32px;
 
     &::before {
       top: 13px;

@@ -59,10 +59,13 @@
 @include media(sp) {
   .about {
     margin-top: 86px;
-    gap: 12px;
+    gap: 32px;
     & .thumbnail {
       padding: 0 20px;
       height: 240px;
+    }
+    & .content__box__title {
+      margin-top: 0;
     }
   }
 

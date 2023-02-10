@@ -1,18 +1,44 @@
 .brand {
   margin-top: 317px;
   @include sectionBgText(OUR BRAND);
+  display: grid;
+  grid-template-columns: 57vw 43vw;
+  grid-template-rows: 142px 90px 455px;
 
-  & .content__box__title {
-    margin-top: 64px;
+  &__title {
+    grid-row: 1/2;
+  }
+
+  &__sub {
+    grid-row: 2/3;
+    & .brand-name {
+      display: block;
+      width: 475px;
+      max-width: 576px;
+    }
+  }
+
+  &__container {
+    grid-row: 3/4;
+  }
+
+  & .content__box {
+    letter-spacing: 0.5px;
+    &__title {
+      width: 511px;
+      margin-top: 86px;
+    }
   }
 
   & .thumbnail-box {
+    grid-row: 1/4;
+    position: relative;
     &::before {
       display: block;
       content: "";
       background-color: $cGreenTea;
-      height: 452px;
-      width: 647px;
+      height: 31.3vw;
+      width: 44.9vw;
       position: absolute;
       bottom: 0;
       right: 0;
@@ -22,8 +48,13 @@
   & .thumbnail {
     display: inline-block;
     position: absolute;
+    width: 41.8vw;
     bottom: 0;
-    right: 0;
+  }
+
+  .cta {
+    margin-top: 70px;
+    padding: 18px 43px;
   }
 }
 
@@ -31,5 +62,85 @@
   display: block;
   font-family: "Allura", cursive;
   font-size: 79px;
-  margin-top: 64px;
+  margin-top: 18px;
+  letter-spacing: 0.5px;
+}
+
+/***************************************************
+ tab
+***************************************************/
+@include media(tab) {
+  .brand {
+    grid-template-columns: 100vw;
+
+    & .container {
+      max-width: 615px;
+    }
+
+    &__title {
+      grid-row: 1/2;
+      width: 100%;
+    }
+
+    &__sub {
+      grid-row: 2/3;
+      width: 100%;
+    }
+
+    &__container {
+      grid-row: 4/5;
+    }
+
+    & .content__box__title {
+      width: auto;
+    }
+
+    & .thumbnail-box {
+      width: 100%;
+      &::before {
+        width: 100%;
+      }
+      grid-row: 3/4;
+      max-width: 615px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    & .thumbnail {
+      width: 438px;
+      right: 0;
+    }
+  }
+}
+
+/***************************************************
+ 550px
+***************************************************/
+@media screen and (max-width: 550px) {
+  .brand {
+    margin-top: 215px;
+    grid-template-rows: 49px 90px 334px auto;
+
+    & .content__box__title {
+      margin-top: 30px;
+    }
+
+    & .thumbnail-box {
+      &::before {
+        width: 74.8vw;
+        margin: 0 20px;
+        height: 52.3vw;
+      }
+    }
+
+    & .thumbnail {      
+      width: 274px;
+      max-width: 100%;
+      right: 28px;
+    }
+
+    & .cta {
+      margin-top: 33px;
+      padding: 10px 27px;
+    }
+  }
 }

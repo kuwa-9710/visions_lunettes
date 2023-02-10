@@ -838,11 +838,14 @@ html {
 @media screen and (max-width: 599px) {
   .about {
     margin-top: 86px;
-    gap: 12px;
+    gap: 32px;
   }
   .about .thumbnail {
     padding: 0 20px;
     height: 240px;
+  }
+  .about .content__box__title {
+    margin-top: 0;
   }
   .leaf {
     top: 194px;
@@ -962,8 +965,8 @@ html {
 
 .leaf-white {
   position: absolute;
-  top: 617px;
-  right: 78px;
+  top: 237px;
+  right: -98px;
 }
 
 /***************************************************
@@ -990,6 +993,7 @@ html {
   .business .content__box {
     padding: 0 20px;
     margin: 0 auto;
+    max-width: 615px;
   }
   .business .content__box__title {
     margin-top: 0;
@@ -1020,7 +1024,7 @@ html {
 @media screen and (max-width: 599px) {
   .business {
     margin-top: 64px;
-    gap: 12px;
+    gap: 32px;
   }
   .business::before {
     top: 13px;
@@ -1045,6 +1049,9 @@ html {
   /***************************************************
    sp
   ***************************************************/
+  display: grid;
+  grid-template-columns: 57vw 43vw;
+  grid-template-rows: 142px 90px 455px;
 }
 .brand::before {
   position: absolute;
@@ -1068,15 +1075,37 @@ html {
     top: -48px;
   }
 }
+.brand__title {
+  grid-row: 1/2;
+}
+.brand__sub {
+  grid-row: 2/3;
+}
+.brand__sub .brand-name {
+  display: block;
+  width: 475px;
+  max-width: 576px;
+}
+.brand__container {
+  grid-row: 3/4;
+}
+.brand .content__box {
+  letter-spacing: 0.5px;
+}
 .brand .content__box__title {
-  margin-top: 64px;
+  width: 511px;
+  margin-top: 86px;
+}
+.brand .thumbnail-box {
+  grid-row: 1/4;
+  position: relative;
 }
 .brand .thumbnail-box::before {
   display: block;
   content: "";
   background-color: #C2C29E;
-  height: 452px;
-  width: 647px;
+  height: 31.3vw;
+  width: 44.9vw;
   position: absolute;
   bottom: 0;
   right: 0;
@@ -1084,17 +1113,87 @@ html {
 .brand .thumbnail {
   display: inline-block;
   position: absolute;
+  width: 41.8vw;
   bottom: 0;
-  right: 0;
+}
+.brand .cta {
+  margin-top: 70px;
+  padding: 18px 43px;
 }
 
 .brand-name {
   display: block;
   font-family: "Allura", cursive;
   font-size: 79px;
-  margin-top: 64px;
+  margin-top: 18px;
+  letter-spacing: 0.5px;
 }
 
+/***************************************************
+ tab
+***************************************************/
+@media screen and (max-width: 1024px) {
+  .brand {
+    grid-template-columns: 100vw;
+  }
+  .brand .container {
+    max-width: 615px;
+  }
+  .brand__title {
+    grid-row: 1/2;
+    width: 100%;
+  }
+  .brand__sub {
+    grid-row: 2/3;
+    width: 100%;
+  }
+  .brand__container {
+    grid-row: 4/5;
+  }
+  .brand .content__box__title {
+    width: auto;
+  }
+  .brand .thumbnail-box {
+    width: 100%;
+    grid-row: 3/4;
+    max-width: 615px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  .brand .thumbnail-box::before {
+    width: 100%;
+  }
+  .brand .thumbnail {
+    width: 438px;
+    right: 0;
+  }
+}
+/***************************************************
+ 550px
+***************************************************/
+@media screen and (max-width: 550px) {
+  .brand {
+    margin-top: 215px;
+    grid-template-rows: 49px 90px 334px auto;
+  }
+  .brand .content__box__title {
+    margin-top: 30px;
+  }
+  .brand .thumbnail-box::before {
+    width: 74.8vw;
+    margin: 0 20px;
+    height: 52.3vw;
+  }
+  .brand .thumbnail {
+    width: 274px;
+    max-width: 100%;
+    right: 28px;
+  }
+  .brand .cta {
+    margin-top: 33px;
+    padding: 10px 27px;
+  }
+}
 .recruit {
   margin-top: 124px;
   text-align: center;

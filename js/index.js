@@ -40,9 +40,16 @@ $(function () {
   });
 });
 
+// スマホメニュー
 $(function () {
   $(".header__nav__button").on("click", function () {
     $(".header__nav__button").toggleClass("active");
     $(".header__menu").toggleClass("active");
   });
+});
+
+//ローディングアニメーション
+$(function () {
+  $(".loader").delay(1500).fadeOut('slow');
+  $(".loader__logo").delay(1200).fadeOut('slow');  
 });

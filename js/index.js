@@ -52,7 +52,7 @@ $(function () {
 $(function () {
   $(".loader").delay(2500).fadeOut("slow");
   $(".loader__logo").delay(2300).fadeOut("slow");
-  // $(".wrap").delay(3000).fadeIn("slow");
+  $(".wrap").delay(3000).fadeIn("slow");
   if (window.matchMedia("(max-width: 1024px)").matches) {
   } else {
     $(".grasses").delay(4000).fadeIn("slow");

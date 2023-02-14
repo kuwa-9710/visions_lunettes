@@ -19,23 +19,17 @@
     <!-- fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <!-- css -->
-    <link rel="stylesheet" href="css/style.css">
-    <!-- jQuery -->
-    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-    <!-- swiper.js -->
-    <script defer src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <!-- js -->
-    <script defer src="js/index.js"></script>
+    <link rel="stylesheet" href="css/style.css">    
 </head>
 
 <body>
-    <div class="loader">
+    <!-- <div class="loader">
         <span class="loader__logo">Visions</span>
-    </div>
+    </div> -->
 
     <div class="wrap">
         <!-- header -->
-        <header class="header">
+        <header class="header fadeDown">
             <h1 class="header__title">Visions</h1>
             <nav class="header__nav">
                 <ul class="header__menu">
@@ -48,7 +42,7 @@
                 <button class="header__button">
                     <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
-                            d="M10.3125 30.9375C11.4516 30.9375 12.375 30.0141 12.375 28.875C12.375 27.7359 11.4516 26.8125 10.3125 26.8125C9.17341 26.8125 8.25 27.7359 8.25 28.875C8.25 30.0141 9.17341 30.9375 10.3125 30.9375Z"
+                            id="path1" d="M10.3125 30.9375C11.4516 30.9375 12.375 30.0141 12.375 28.875C12.375 27.7359 11.4516 26.8125 10.3125 26.8125C9.17341 26.8125 8.25 27.7359 8.25 28.875C8.25 30.0141 9.17341 30.9375 10.3125 30.9375Z"
                             fill="white" />
                         <path
                             d="M24.75 30.9375C25.8891 30.9375 26.8125 30.0141 26.8125 28.875C26.8125 27.7359 25.8891 26.8125 24.75 26.8125C23.6109 26.8125 22.6875 27.7359 22.6875 28.875C22.6875 30.0141 23.6109 30.9375 24.75 30.9375Z"
@@ -88,8 +82,8 @@
                         d="M92.7856 83.0275C92.021 81.2522 92.8403 79.1932 94.6157 78.4286L128.616 63.7855C130.391 63.0209 132.45 63.8403 133.215 65.6156C133.979 67.3909 133.16 69.45 131.385 70.2146L97.3845 84.8577C95.6092 85.6223 93.5502 84.8029 92.7856 83.0275Z"
                         fill="#42D76C" />
                 </svg>
-                <h2 class="mv__title">目元から環境に優しく</h2>
-                <p class="mv__sub">Visionsはメガネを通して<br class="br-sp"><span
+                <h2 class="mv__title fadeUp">目元から環境に優しく</h2>
+                <p class="mv__sub fadeUpSm">Visionsはメガネを通して<br class="br-sp"><span
                         class="green-underline">社会のサステナビリティを向上</span>させます</p>
                 <div class="bg-image"></div>
             </div>
@@ -147,9 +141,9 @@
             </div>
             <div class="about__container container">
                 <div class="content__box">
-                    <h3 class="content__box__title">メガネ販売の"イノベーター"<br class="br-sp">としての役割があります</h3>
-                    <p class="content__box__text">誰でも気軽にオンラインでメガネを購入できる時代に。徹底した制作プロセスの可視化、そしてお客様に対して真摯な姿勢を心がけています。</p>
-                    <a class="cta" href="/">Learn More</a>
+                    <h3 id="about__box__title" class="content__box__title">メガネ販売の"イノベーター"<br class="br-sp">としての役割があります</h3>
+                    <p id="about__box__sub" class="content__box__text">誰でも気軽にオンラインでメガネを購入できる時代に。徹底した制作プロセスの可視化、そしてお客様に対して真摯な姿勢を心がけています。</p>
+                    <a id="about__cta" class="cta" href="/">Learn More</a>
                     <svg class="leaf" width="69" height="79" viewBox="0 0 69 79" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -188,7 +182,7 @@
                     </svg>
                 </div>
             </div>
-            <img class="thumbnail" src="/image/about-image.jpg" alt="オフィスの外観の写真">
+            <img id="about__thumbnail" class="thumbnail" src="/image/about-image.jpg" alt="オフィスの外観の写真">
         </div>
 
         <!-- business -->
@@ -199,11 +193,11 @@
             </div>
             <div class="business__container">
                 <div class="content__box">
-                    <h3 class="content__box__title">100%再生資源からメガネを作っています。</h3>
-                    <p class="content__box__text">
+                    <h3 id="business__box__title" class="content__box__title">100%再生資源からメガネを作っています。</h3>
+                    <p id="business__box__text" class="content__box__text">
                         メガネ販売を通じて持続可能な社会の実現に向けて貢献して行きます。環境への配慮、社会への貢献、ユーザビリティ。これが私たちの３つの軸です。
                     </p>
-                    <a class="cta" href="/">Learn More</a>
+                    <a id="business__cta" class="cta" href="/">Learn More</a>
                     <svg class="leaf-white" width="227" height="259" viewBox="0 0 227 259" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -242,7 +236,7 @@
                     </svg>
                 </div>
             </div>
-            <div class="thumbnail-box">
+            <div id="business__thumbnail" class="thumbnail-box">
                 <img class="thumbnail" src="/image/business-image.jpg" alt="オフィスの外観の写真">
             </div>
         </div>
@@ -264,7 +258,7 @@
                     <a href="/" class="cta">ONLINE STORE</a>
                 </div>
             </div>
-            <div class="thumbnail-box">
+            <div id="brand__thumbnail__box" class="thumbnail-box">
                 <img class="thumbnail" src="image/lunettes-model.png" alt="メガネをかけている女性の切り抜き写真">
             </div>
         </div>
@@ -273,11 +267,11 @@
         <div id="recruit" class="recruit">
             <div class="bg-blur">
                 <div class="container">
-                    <div class="title">JOIN US</div>
-                    <span class="title__sub">採用情報</span>
-                    <p class="recruit__text">Lunettesを通して<br class="br-sp">世界を変えていきたい。<br>
+                    <div id="recruit__title" class="title">JOIN US</div>
+                    <span id="recruit__sub" class="title__sub">採用情報</span>
+                    <p id="recruit__text" class="recruit__text">Lunettesを通して<br class="br-sp">世界を変えていきたい。<br>
                         そんな仲間を募集しています。</p>
-                    <div class="buttons">
+                    <div id="recruit__buttons" class="buttons">
                         <a href="/" class="recruit__cta">新卒採用</a>
                         <a href="/" class="recruit__cta">中途採用</a>
                     </div>
@@ -322,10 +316,16 @@
             </div>
             <small class="copyrights">©️ VISIONS All rights reserved.</small>
         </footer>
-
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
     </div>
+    <!-- jQuery -->
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <!-- swiper.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!-- js -->
+    <script defer src="js/index.js"></script>
 </body>
 
 </html>

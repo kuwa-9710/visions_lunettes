@@ -3,13 +3,83 @@ html {
   font-family: "Noto Sans JP", sans-serif;
 }
 
+.fadeUp {
+  animation-name: fadeUpAnime;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fadeUpSm {
+  animation-name: fadeUpAnimeSm;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeUpAnimeSm {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fadeDown {
+  animation-name: fadeDownAnime;
+  animation-duration: 0.7s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  animation-delay: 1s;
+}
+
+@keyframes fadeDownAnime {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.slideTopRight {
+  animation-name: slideTopRightAnime;
+  animation-duration: 0.7s;
+  animation-fill-mode: forwards;
+  transform: translate(100% 100%);
+}
+
+@keyframes slideTopRightAnime {
+  from {
+    transform: translate(100px, -100px);
+  }
+  to {
+    transform: translate(0);
+  }
+}
 .wrap {
   position: relative;
   overflow: hidden;
   background-color: #FAF9F7;
   max-width: 2500px;
   margin: 0 auto;
-} /***************************************************
+}
+
+/***************************************************
  media
 ***************************************************/
 .loader {
@@ -19,30 +89,19 @@ html {
   top: 0;
   left: 0;
   z-index: 999999;
-  background-color: #fff;
+  background-color: #86AC41;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .loader__logo {
+  color: #fff;
   font-size: 48px;
   font-weight: bold;
-  -webkit-animation-name: fadeIn;
-          animation-name: fadeIn;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation-name: fadeIn;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
   opacity: 0;
-}
-
-@-webkit-keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 
 @keyframes fadeIn {
@@ -56,10 +115,10 @@ html {
 .content__title {
   font-size: 48px;
   font-weight: bold;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   position: relative;
+  opacity: 1;
 }
 .content__title::after {
   height: 5px;
@@ -154,7 +213,6 @@ html {
 .cta {
   margin-top: 73px;
   display: block;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   color: #86AC41;
@@ -352,7 +410,7 @@ html {
     width: 33px;
   }
   .header__button .online-shop,
-.header__button .angle {
+  .header__button .angle {
     display: none;
   }
   .header__nav__button {
@@ -437,6 +495,9 @@ html {
   margin-top: 8px;
   letter-spacing: 1px;
 }
+.mv__sub .fadeUpsm {
+  animation-delay: 0.3s;
+}
 .mv .bg-image {
   background-image: url("/image/bg-mv.png");
   background-size: cover;
@@ -461,6 +522,10 @@ html {
   color: #fff;
   content: "目元から環境に優しく";
   z-index: 1;
+  animation-name: fadeUpAnime;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  opacity: 0;
 }
 .mv .bg-image::after {
   font-size: 24px;
@@ -472,12 +537,18 @@ html {
   color: #fff;
   z-index: 1;
   content: "Visionsはメガネを通して社会のサステナビリティを向上させます";
+  animation-name: fadeUpAnimeSm;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  animation-delay: 0.5s;
 }
 
 .grasses {
   position: absolute;
   top: 244px;
   left: -412px;
+  display: none;
 }
 
 .br-sp {
@@ -565,6 +636,9 @@ html {
   .green-underline {
     -webkit-text-decoration: underline wavy #67C308;
             text-decoration: underline wavy #67C308;
+  }
+  .grasses {
+    display: none;
   }
 }
 /***************************************************
@@ -737,15 +811,6 @@ html {
   line-height: 1.5em;
 }
 
-@-webkit-keyframes animate-bg-text {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
 @keyframes animate-bg-text {
   0% {
     transform: translateX(100%);
@@ -773,7 +838,6 @@ html {
 .title {
   font-size: 48px;
   font-weight: bold;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
@@ -946,7 +1010,6 @@ html {
   color: #fff;
 }
 .business .container-r {
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   margin-left: auto;

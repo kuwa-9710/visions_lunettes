@@ -32,6 +32,9 @@ $mv-content-height: 800px;
     top: 432px;
     margin-top: 8px;
     letter-spacing: 1px;
+    & .fadeUpsm {
+      animation-delay: 0.3s;
+    }
   }
 
   & .bg-image {
@@ -58,6 +61,12 @@ $mv-content-height: 800px;
       color: $cWhite;
       content: "目元から環境に優しく";
       z-index: 1;
+
+      // animation
+      animation-name: fadeUpAnime;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+      opacity: 0;
     }
     &::after {
       font-size: 24px;
@@ -69,6 +78,13 @@ $mv-content-height: 800px;
       color: $cWhite;
       z-index: 1;
       content: "Visionsはメガネを通して社会のサステナビリティを向上させます";
+
+      // animaiton
+      animation-name: fadeUpAnimeSm;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+      opacity: 0;
+      animation-delay: 0.5s;
     }
   }
 }
@@ -77,6 +93,7 @@ $mv-content-height: 800px;
   position: absolute;
   top: 244px;
   left: -412px;
+  display: none;
 }
 
 .br-sp {
@@ -119,7 +136,7 @@ $mv-content-height: 800px;
     &__sub {
       left: -250px;
     }
-    & .bg-image {            
+    & .bg-image {
       &::before {
         left: -250px;
       }
@@ -148,7 +165,7 @@ $mv-content-height: 800px;
     }
 
     &__title {
-      font-size: 48px;      
+      font-size: 48px;
       color: $cWhite;
       top: 53.4vh;
       left: 70px;
@@ -181,6 +198,10 @@ $mv-content-height: 800px;
 
   .green-underline {
     text-decoration: underline wavy $cGreen;
+  }
+  
+  .grasses {
+    display: none;
   }
 }
 

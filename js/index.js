@@ -54,7 +54,7 @@ $(function () {
   $(".loader__logo").delay(2300).fadeOut("slow");
   if (window.matchMedia("(max-width: 1024px)").matches) {
   } else {
-    $(".grasses").delay(4000).fadeIn("slow");
+    $(".grasses").delay(2000).fadeIn("slow");
   }
 });
 

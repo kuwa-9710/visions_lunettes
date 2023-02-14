@@ -497,7 +497,7 @@ html {
   animation-delay: 0.3s;
 }
 .mv .bg-image {
-  background-image: url("/image/bg-mv.png");
+  background-image: url("https://github.com/kuwa-9710/visions_lunettes/blob/main/image/mv-img.png?raw=true");
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 0 0 0 273px;
@@ -1299,7 +1299,7 @@ html {
 .recruit {
   margin-top: 124px;
   text-align: center;
-  background-image: url(/image/bg-recruit.jpg);
+  background-image: url("https://github.com/kuwa-9710/visions_lunettes/blob/main/image/bg-recruit.jpg?raw=true");
   background-position: center;
   background-size: 100%;
   background-repeat: no-repeat;

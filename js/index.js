@@ -52,7 +52,6 @@ $(function () {
 $(function () {
   $(".loader").delay(2500).fadeOut("slow");
   $(".loader__logo").delay(2300).fadeOut("slow");
-  $(".wrap").delay(3000).fadeIn("slow");
   if (window.matchMedia("(max-width: 1024px)").matches) {
   } else {
     $(".grasses").delay(4000).fadeIn("slow");
@@ -122,6 +121,7 @@ gsap.from("#about__cta", {
     id: "about__cta",    
   },
 });
+
 gsap.from("#about__thumbnail", {
   x: 100,
   duration: 1,
@@ -131,6 +131,17 @@ gsap.from("#about__thumbnail", {
     start: "center 80%",
     toggleActions: "play none none none",
     id: "about__thumbnail",    
+  },
+});
+
+gsap.from(".leaf", {  
+  duration: 1,
+  opacity: 0,
+  scrollTrigger: {
+    trigger: ".leaf",
+    start: "center 80%",
+    toggleActions: "play none none none",
+    id: "leaf",    
   },
 });
 
@@ -199,6 +210,16 @@ gsap.from("#business__cta", {
     start: "top 80%",
     toggleActions: "play none none none",
     id: "business__cta",    
+  },
+});
+gsap.from(".leaf-white", {  
+  duration: 1,
+  opacity: 0,
+  scrollTrigger: {
+    trigger: ".leaf-white",
+    start: "center 80%",
+    toggleActions: "play none none none",
+    id: "leaf-white",    
   },
 });
 

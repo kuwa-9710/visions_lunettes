@@ -279,3 +279,9 @@
     }
   }
 }
+
+.news-html {
+  & .header__title {
+    color: $cWhite;
+  }
+}

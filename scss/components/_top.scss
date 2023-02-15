@@ -1,0 +1,24 @@
+.top {
+  height: 422px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../../image/bg-news.jpg");
+  background-position: center;
+  background-size: cover;
+
+  &__container {
+    text-align: center;
+
+    &__title {
+      font-size: 48px;
+      font-weight: bold;
+      color: $cWhite;
+    }
+    &__sub {
+      font-size: 18px;
+      font-weight: bold;
+      color: $cWhite;
+    }
+  }
+}

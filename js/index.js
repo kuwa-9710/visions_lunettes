@@ -3,7 +3,6 @@ const swiper = new Swiper(".swiper", {
   slidesPerView: 1,
   spaceBetween: 44,
   grabCursor: true,
-
   breakpoints: {
     350: {
       slidesPerView: 1.2,
@@ -63,257 +62,78 @@ $(function () {
 */
 gsap.registerPlugin(ScrollTrigger);
 
-// news
-gsap.from(".news__content", {
-  x: 100,
-  duration: 1,
-  opacity: 0,
-  scrollTrigger: {
-    trigger: ".news__content",
-    start: "top 80%",
-    toggleActions: "play none none none",
-    id: "news__content",    
-  },
+const fadeInRights = gsap.utils.toArray(".fadeInRight");
+
+fadeInRights.forEach((fadeInRight) => {
+  gsap.from(fadeInRight, {
+    x: 100,
+    duration: 1,
+    opacity: 0,
+    ease: "power4.out",
+    scrollTrigger: {
+      trigger: fadeInRight,
+      start: "top 80%",
+      toggleActions: "play none none none",
+      id: "fadeInRight",
+    },
+  });
+});
+
+const fadeInLefts = gsap.utils.toArray(".fadeInLeft");
+
+fadeInLefts.forEach((fadeInLeft) => {
+  gsap.from(fadeInLeft, {
+    x: -100,
+    duration: 1,
+    opacity: 0,
+    ease: "power4.out",
+    scrollTrigger: {
+      trigger: fadeInLeft,
+      start: "center 80%",
+      toggleActions: "play none none none",
+      id: "fadeInLeft",
+    },
+  });
+});
+
+const fadeInUps = gsap.utils.toArray(".fadeInUp");
+
+fadeInUps.forEach((fadeInUp) => {
+  gsap.from(fadeInUp, {
+    y: 50,
+    duration: 1,
+    opacity: 0,
+    ease: "power4.out",
+    scrollTrigger: {
+      trigger: fadeInUp,
+      start: "top 80%",
+      toggleActions: "play none none none",
+      id: "fadeInUp",
+      markers: true,
+    },
+  });
 });
 
 // about
-gsap.from("#about__box__title", {
-  y: 50,
-  duration: 1,
-  opacity: 0,
-  scrollTrigger: {
-    trigger: "#about__box__title",
-    start: "center 80%",
-    toggleActions: "play none none none",
-    id: "about__box__title",    
-  },
-});
-gsap.from("#about__box__sub", {
-  y: 50,
-  duration: 1,
-  opacity: 0,
-  scrollTrigger: {
-    trigger: "#about__box__sub",
-    start: "top 80%",
-    toggleActions: "play none none none",
-    id: "about__box__sub",
-  },
-});
-gsap.from(".about__title", {
-  y: 50,
-  duration: 1,
-  opacity: 0,
-  scrollTrigger: {
-    trigger: ".about__title",
-    start: "top 80%",
-    toggleActions: "play none none none",
-    id: "about__title",    
-  },
-});
-gsap.from("#about__cta", {
-  y: 50,
-  duration: 1,
-  opacity: 0,
-  scrollTrigger: {
-    trigger: "#about__cta",
-    start: "center 80%",
-    toggleActions: "play none none none",
-    id: "about__cta",    
-  },
-});
-
-gsap.from("#about__thumbnail", {
-  x: 100,
-  duration: 1,
-  opacity: 0,
-  scrollTrigger: {
-    trigger: "#about__thumbnail",
-    start: "center 80%",
-    toggleActions: "play none none none",
-    id: "about__thumbnail",    
-  },
-});
-
-gsap.from(".leaf", {  
+gsap.from(".leaf", {
   duration: 1,
   opacity: 0,
   scrollTrigger: {
     trigger: ".leaf",
     start: "center 80%",
     toggleActions: "play none none none",
-    id: "leaf",    
+    id: "leaf",
   },
 });
 
 // business
-gsap.from(".business__title", {
-  y: 50,
-  duration: 1,
-  opacity: 0,
-  scrollTrigger: {
-    trigger: ".business__title",
-    start: "top 80%",
-    toggleActions: "play none none none",
-    id: "business__title",    
-  },
-});
-gsap.from(".business__content", {
-  y: 50,
-  duration: 1,
-  opacity: 0,
-  scrollTrigger: {
-    trigger: ".business__content",
-    start: "top 80%",
-    toggleActions: "play none none none",
-    id: "business__content",    
-  },
-});
-gsap.from("#business__box__title", {
-  y: 50,
-  duration: 1,
-  opacity: 0,
-  scrollTrigger: {
-    trigger: "#business__box__title",
-    start: "top 80%",
-    toggleActions: "play none none none",
-    id: "business__box__title",    
-  },
-});
-gsap.from("#business__box__text", {
-  y: 50,
-  duration: 1,
-  opacity: 0,
-  scrollTrigger: {
-    trigger: "#business__box__text",
-    start: "top 80%",
-    toggleActions: "play none none none",
-    id: "business__box__text",    
-  },
-});
-gsap.from("#business__thumbnail", {
-  x: -100,
-  duration: 1,
-  opacity: 0,
-  scrollTrigger: {
-    trigger: "#business__thumbnail",
-    start: "center 80%",
-    toggleActions: "play none none none",
-    id: "business__thumbnail",    
-  },
-});
-gsap.from("#business__cta", {
-  y: 50,
-  duration: 1,
-  opacity: 0,
-  scrollTrigger: {
-    trigger: "#business__cta",
-    start: "top 80%",
-    toggleActions: "play none none none",
-    id: "business__cta",    
-  },
-});
-gsap.from(".leaf-white", {  
+gsap.from(".leaf-white", {
   duration: 1,
   opacity: 0,
   scrollTrigger: {
     trigger: ".leaf-white",
     start: "center 80%",
     toggleActions: "play none none none",
-    id: "leaf-white",    
-  },
-});
-
-// brand
-gsap.from(".brand__title", {
-  y: 50,
-  duration: 1,
-  opacity: 0,
-  scrollTrigger: {
-    trigger: ".brand__title",
-    start: "top 80%",
-    toggleActions: "play none none none",
-    id: "brand__title",    
-  },
-});
-
-gsap.from(".brand__sub", {
-  y: 50,
-  duration: 1,
-  opacity: 0,
-  scrollTrigger: {
-    trigger: ".brand__sub",
-    start: "top 80%",
-    toggleActions: "play none none none",
-    id: "brand__sub",    
-  },
-});
-
-gsap.from(".brand__container", {
-  y: 50,
-  duration: 1,
-  opacity: 0,
-  scrollTrigger: {
-    trigger: ".brand__container",
-    start: "top 80%",
-    toggleActions: "play none none none",
-    id: "brand__container",    
-  },
-});
-
-gsap.from("#brand__thumbnail__box", {
-  x: 100,
-  duration: 1,
-  opacity: 0,
-  scrollTrigger: {
-    trigger: "#brand__thumbnail__box",
-    start: "center 80%",
-    toggleActions: "play none none none",
-    id: "brand__thumbnail__box",    
-  },
-});
-
-// recruit
-gsap.from("#recruit__title", {
-  y: 50,
-  duration: 1,
-  opacity: 0,
-  scrollTrigger: {
-    trigger: "#recruit__title",
-    start: "top 80%",
-    toggleActions: "play none none none",
-    id: "recruit__title",    
-  },
-});
-gsap.from("#recruit__sub", {
-  y: 50,
-  duration: 1,
-  opacity: 0,
-  scrollTrigger: {
-    trigger: "#recruit__sub",
-    start: "top 80%",
-    toggleActions: "play none none none",
-    id: "recruit__sub",    
-  },
-});
-gsap.from("#recruit__text", {
-  y: 50,
-  duration: 1,
-  opacity: 0,
-  scrollTrigger: {
-    trigger: "#recruit__text",
-    start: "top 80%",
-    toggleActions: "play none none none",
-    id: "recruit__text",    
-  },
-});
-gsap.from("#recruit__buttons", {
-  y: 50,
-  duration: 1,
-  opacity: 0,
-  scrollTrigger: {
-    trigger: "#recruit__buttons",
-    start: "top 80%",
-    toggleActions: "play none none none",
-    id: "recruit__buttons",    
+    id: "leaf-white",
   },
 });

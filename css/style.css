@@ -464,7 +464,7 @@ html {
     padding-left: 20px;
   }
 }
-.news-html .header__title {
+.news-html .header__title, .contact-html .header__title {
   color: #fff;
 }
 
@@ -1382,7 +1382,6 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("https://github.com/kuwa-9710/visions_lunettes/blob/main/image/bg-news.jpg?raw=true");
   background-position: center;
   background-size: cover;
 }
@@ -1398,6 +1397,14 @@ html {
   font-size: 18px;
   font-weight: bold;
   color: #fff;
+}
+
+.news-html .top {
+  background-image: url("https://github.com/kuwa-9710/visions_lunettes/blob/main/image/bg-news.jpg?raw=true");
+}
+
+.contact-html .top {
+  background-image: url("https://github.com/kuwa-9710/visions_lunettes/blob/main/image/bg-recruit.jpg?raw=true");
 }
 
 .category {
@@ -1535,6 +1542,60 @@ html {
     width: 350px;
   }
 }
+.contact {
+  max-width: 840px;
+  margin: 0 auto;
+  padding-top: 180px;
+  padding-bottom: 143px;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+}
+.contact label,
+.contact input,
+.contact textarea {
+  display: block;
+  font-size: 24px;
+}
+.contact input {
+  background-color: #fff;
+  width: 100%;
+  height: 52px;
+  border: 1px solid #777777;
+  border-radius: 14px;
+  padding: 8px 16px;
+}
+.contact input::-moz-placeholder {
+  color: #e4e4e4;
+}
+.contact input::placeholder {
+  color: #e4e4e4;
+}
+.contact textarea {
+  background-color: #fff;
+  width: 100%;
+  border: 1px solid #777777;
+  border-radius: 14px;
+  padding: 8px 16px;
+}
+.contact__btn {
+  background-color: #fff;
+  font-size: 16px;
+  border: 1px solid #000000;
+  width: 200px;
+  padding: 18px 0;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 113px;
+  transition: all 0.3s ease-in-out;
+}
+.contact__btn:hover {
+  background-color: #000000;
+  color: #fff;
+}
+
 .footer {
   height: 300px;
   color: #fff;

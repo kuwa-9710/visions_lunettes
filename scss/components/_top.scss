@@ -3,8 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  // background-image: url("../../image/bg-news.jpg");
-  background-image: url("https://github.com/kuwa-9710/visions_lunettes/blob/main/image/bg-news.jpg?raw=true");
+
   background-position: center;
   background-size: cover;
 
@@ -21,5 +20,18 @@
       font-weight: bold;
       color: $cWhite;
     }
+  }
+}
+
+.news-html {
+  .top {
+    // background-image: url("../../image/bg-news.jpg");
+    background-image: url("https://github.com/kuwa-9710/visions_lunettes/blob/main/image/bg-news.jpg?raw=true");
+  }
+}
+
+.contact-html {
+  .top {
+    background-image: url("https://github.com/kuwa-9710/visions_lunettes/blob/main/image/bg-recruit.jpg?raw=true");
   }
 }

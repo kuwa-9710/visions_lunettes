@@ -58,10 +58,15 @@
 ***************************************************/
 @include media(sp) {
   .contact {
+    padding-top: 48px;
+    padding-bottom: 64px;
     & label,
     input,
     textarea {
       font-size: 20px;
+    }
+    &__btn {
+      margin-top: 40px;
     }
   }
 }

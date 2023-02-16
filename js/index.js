@@ -69,7 +69,7 @@ fadeInRights.forEach((fadeInRight) => {
     x: 100,
     duration: 1,
     opacity: 0,
-    ease: "power4.out",
+    ease: "power2.out",
     scrollTrigger: {
       trigger: fadeInRight,
       start: "top 80%",
@@ -86,7 +86,7 @@ fadeInLefts.forEach((fadeInLeft) => {
     x: -100,
     duration: 1,
     opacity: 0,
-    ease: "power4.out",
+    ease: "power2.out",
     scrollTrigger: {
       trigger: fadeInLeft,
       start: "center 80%",
@@ -103,13 +103,12 @@ fadeInUps.forEach((fadeInUp) => {
     y: 50,
     duration: 1,
     opacity: 0,
-    ease: "power4.out",
+    ease: "power2.out",
     scrollTrigger: {
       trigger: fadeInUp,
       start: "top 80%",
       toggleActions: "play none none none",
-      id: "fadeInUp",
-      markers: true,
+      id: "fadeInUp",      
     },
   });
 });

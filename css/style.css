@@ -151,6 +151,55 @@ html {
   line-height: 1.5em;
 }
 
+.action {
+  margin-top: 128px;
+  position: relative;
+  /***************************************************
+   tab
+  ***************************************************/
+  /***************************************************
+   sp
+  ***************************************************/
+}
+.action::before {
+  position: absolute;
+  z-index: 1;
+  top: -200px;
+  content: "OUR ACTION";
+  opacity: 0.03;
+  font-weight: 700;
+  font-size: 228px;
+  white-space: nowrap;
+}
+@media screen and (max-width: 1024px) {
+  .action::before {
+    font-size: 120px;
+    top: -85px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .action::before {
+    font-size: 80px;
+    top: -48px;
+  }
+}
+.action::before {
+  top: -150px;
+}
+.action .content__title {
+  text-align: center;
+  width: auto;
+}
+.action .content__title::after {
+  display: none;
+}
+.action .content__title__sub {
+  color: #000000;
+  display: block;
+  width: auto;
+  text-align: center;
+}
+
 /***************************************************
  tab
 ***************************************************/
@@ -472,8 +521,19 @@ html {
     padding-left: 20px;
   }
 }
-.news-html .header__title, .contact-html .header__title {
+.news-html .header__title,
+.contact-html .header__title,
+.business-html .header__title,
+.about-html .header__title,
+.recruit-html .header__title {
   color: #fff;
+}
+.news-html .header.change-color .header__title,
+.contact-html .header.change-color .header__title,
+.business-html .header.change-color .header__title,
+.about-html .header.change-color .header__title,
+.recruit-html .header.change-color .header__title {
+  color: #333333;
 }
 
 .mv {
@@ -665,11 +725,9 @@ html {
 @media screen and (max-width: 599px) {
   .mv__title {
     font-size: 40px;
-    padding-right: 20px;
   }
   .mv__sub {
     font-size: 24px;
-    padding-right: 20px;
   }
   .mv .bg-image {
     background-size: cover;
@@ -1410,6 +1468,10 @@ html {
   background-image: url("https://github.com/kuwa-9710/visions_lunettes/blob/main/image/bg-recruit.jpg?raw=true");
 }
 
+.business-html .top {
+  background-image: url("https://github.com/kuwa-9710/visions_lunettes/blob/main/image/business-image.jpg?raw=true");
+}
+
 .category {
   margin: 0 auto;
   margin-top: 98px;
@@ -1615,6 +1677,73 @@ html {
   }
   .contact__btn {
     margin-top: 40px;
+  }
+}
+.action__container {
+  position: absolute;
+  z-index: 11;
+  top: 140px;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.action__title__1, .action__title__2 {
+  font-weight: bold;
+  font-size: 48px;
+  display: inline-block;
+  padding: 11px 78px;
+  background-color: #fff;
+  margin-right: 19.7vw;
+}
+.action__title__2 {
+  margin-top: 34px;
+}
+.action__text {
+  margin-top: 40px;
+  font-weight: bold;
+  font-size: 24px;
+  color: #fff;
+  width: 398px;
+  line-height: 1.5em;
+  margin-right: 11.6vw;
+}
+
+.wrapper {
+  margin-top: 143px;
+  position: relative;
+}
+
+.action-thumbnail {
+  position: relative;
+}
+.action-thumbnail img {
+  position: relative;
+  width: 55vw;
+  z-index: 10;
+}
+.action-thumbnail::after {
+  content: "";
+  width: 76vw;
+  position: absolute;
+  top: 70px;
+  right: 0;
+  border-bottom: 649px solid #86AC41; /* 高さ */
+  border-left: 253px solid transparent; /* 左側の角度 */
+}
+
+/***************************************************
+ 1270px
+***************************************************/
+@media screen and (max-width: 1270px) {
+  .action__title__1, .action__title__2 {
+    margin-right: 12vw;
+  }
+  .action__text {
+    margin-right: 6vw;
+  }
+  .action-thumbnail::after {
+    border-bottom: 570px solid #86ac41;
   }
 }
 .footer {

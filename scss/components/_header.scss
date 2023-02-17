@@ -8,7 +8,7 @@
   z-index: 9999;
   width: 100%;
   max-width: 2500px;
-  transition: all 0.3s ease;  
+  transition: all 0.3s ease;
 
   &.change-color {
     color: $cBlack;
@@ -42,7 +42,7 @@
     & li {
       margin-right: 40px;
       font-size: 16px;
-      transition: all .3s ease-in-out;      
+      transition: all 0.3s ease-in-out;
       &:hover {
         color: $cLightGreen;
         transform: scale(1.1);
@@ -162,7 +162,7 @@
     /***************************************************
     ナビゲーションメニュー
     ***************************************************/
-    &__menu {      
+    &__menu {
       position: absolute;
       top: 0;
       left: 120%;
@@ -175,25 +175,25 @@
       justify-content: center;
       align-items: center;
       gap: 30px;
-      transition: all ease .5s;
-      
+      transition: all ease 0.5s;
+
       // activeクラス付与時
       &.active {
         top: 0;
         left: 0;
       }
-      
+
       &::before {
         color: $cWhite;
         content: "Visions";
         font-size: 32px;
-        font-weight: bold;        
+        font-weight: bold;
       }
 
       & li {
         color: $cWhite;
         &:hover {
-          color: $cWhite;          
+          color: $cWhite;
         }
       }
     }
@@ -276,7 +276,6 @@
   }
 }
 
-
 /***************************************************
  media:sp
 ***************************************************/
@@ -285,11 +284,23 @@
     &__title {
       padding-left: 20px;
     }
-  }  
+  }
 }
 
-.news-html, .contact-html {
-  & .header__title {
-    color: $cWhite;
+.news-html,
+.contact-html,
+.business-html,
+.about-html,
+.recruit-html {
+  .header {
+    &__title {
+      color: $cWhite;
+    }
+
+    &.change-color {
+      & .header__title {
+        color: $cBlack;
+      }
+    }
   }
 }

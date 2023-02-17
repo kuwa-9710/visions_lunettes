@@ -172,24 +172,17 @@ $mv-content-height: 800px;
       position: relative;
       text-align: center;
       top: 0;
-      left: 0;
-
-      // top: 53.4vh;
-      // left: 70px;
+      left: 0;            
       z-index: 20;
     }
 
     &__sub {
       color: $cWhite;
       text-align: center;
-      padding-right: 0;
-      // padding-right: 70px;
+      padding-right: 0;      
       position: relative;
       top: 0;
       left: 0;
-
-      // top: 58.7vh;
-      // left: 70px;
       z-index: 20;
       line-height: 1.5em;
     }
@@ -227,16 +220,10 @@ $mv-content-height: 800px;
 @include media(sp) {
   .mv {
     &__title {
-      font-size: 40px;
-      // top: 474px;
-      // left: 20px;
-      padding-right: 20px;
+      font-size: 40px;                  
     }
     &__sub {
-      font-size: 24px;
-      // top: 510px;
-      // left: 20px;
-      padding-right: 20px;
+      font-size: 24px;            
     }
 
     & .bg-image {

@@ -30,25 +30,35 @@ const swiper = new Swiper(".swiper", {
 
 // headerの背景色を変更するメソッド
 $(function () {
-  $(window).on("scroll", function () {
-    if ($(".mv").height() < $(this).scrollTop()) {
-      $(".header").addClass("change-color");
-    } else {
-      $(".header").removeClass("change-color");
-    }
-  });
+  if ($(".wrap").hasClass("top-page")) {
+    $(window).on("scroll", function () {
+      if ($(".mv").height() < $(this).scrollTop()) {
+        $(".header").addClass("change-color");
+      } else {
+        $(".header").removeClass("change-color");
+      }
+    });
+  } else {
+    $(window).on("scroll", function () {
+      if ($(".top").height() < $(this).scrollTop()) {
+        $(".header").addClass("change-color");
+      } else {
+        $(".header").removeClass("change-color");
+      }
+    });
+  }
 });
 
 // headerの背景色を変更するメソッド
-$(function () {
-  $(window).on("scroll", function () {
-    if ($(".top").height() < $(this).scrollTop()) {
-      $(".header").addClass("change-color");
-    } else {
-      $(".header").removeClass("change-color");
-    }
-  });
-});
+// $(function () {
+//   $(window).on("scroll", function () {
+//     if ($(".top").height() < $(this).scrollTop()) {
+//       $(".header").addClass("change-color");
+//     } else {
+//       $(".header").removeClass("change-color");
+//     }
+//   });
+// });
 
 // スマホメニュー
 $(function () {
@@ -56,6 +66,13 @@ $(function () {
     $(".header__nav__button").toggleClass("active");
     $(".header__menu").toggleClass("active");
   });
+  $("header__nav__menu").on("click"),
+    function () {
+      if ($("header__nav__button").hasClass("active")) {
+        $(".header__nav__button").toggleClass("active");
+        $(".header__menu").toggleClass("active");
+      }
+    };
 });
 
 //ローディングアニメーション
@@ -119,7 +136,7 @@ fadeInUps.forEach((fadeInUp) => {
       trigger: fadeInUp,
       start: "top 80%",
       toggleActions: "play none none none",
-      id: "fadeInUp",      
+      id: "fadeInUp",
     },
   });
 });

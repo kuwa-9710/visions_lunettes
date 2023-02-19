@@ -33,13 +33,12 @@ $mv-content-height: 800px;
     margin-top: 8px;
     letter-spacing: 1px;
     & .fadeUpsm {
-      animation-delay: 0.3s;
+      animation-delay: 2.8s;
     }
   }
 
   & .bg-image {    
-    background-image: url("../image/mv-img_compressed.jpg");
-    // background-image: url("https://github.com/kuwa-9710/visions_lunettes/blob/main/image/mv-img_compressed.jpg?raw=true");
+    background-image: url("../image/mv-img_compressed.jpg");    
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 0 0 0 273px;
@@ -68,6 +67,7 @@ $mv-content-height: 800px;
       animation-duration: 1s;
       animation-fill-mode: forwards;
       opacity: 0;
+      animation-delay: 2.5s;
     }
     &::after {
       font-size: 24px;
@@ -85,7 +85,7 @@ $mv-content-height: 800px;
       animation-duration: 1s;
       animation-fill-mode: forwards;
       opacity: 0;
-      animation-delay: 0.5s;
+      animation-delay: 3s;
     }
   }
 }

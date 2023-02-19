@@ -43,6 +43,32 @@
   }
 }
 
+// business-html
+.action {
+  margin-top: 128px;
+  @include sectionBgText(OUR ACTION);
+  &::before {
+    top: -150px;
+  }
+
+  & .content {
+    &__title {
+      text-align: center;
+      width: auto;
+      &::after {
+        display: none;
+      }
+
+      &__sub {
+        color: #000000;
+        display: block;
+        width: auto;
+        text-align: center;
+      }
+    }
+  }
+}
+
 /***************************************************
  tab
 ***************************************************/

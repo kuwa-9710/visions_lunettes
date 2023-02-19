@@ -3,10 +3,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
   background-position: center;
   background-size: cover;
-
+  
   &__container {
     text-align: center;
 
@@ -33,5 +32,11 @@
 .contact-html {
   .top {
     background-image: url("https://github.com/kuwa-9710/visions_lunettes/blob/main/image/bg-recruit.jpg?raw=true");
+  }
+}
+
+.business-html {
+  .top {
+    background-image: url("https://github.com/kuwa-9710/visions_lunettes/blob/main/image/business-image.jpg?raw=true");
   }
 }

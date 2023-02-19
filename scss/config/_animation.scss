@@ -46,6 +46,12 @@
   animation-delay: 1s;
 }
 
+.top-page {
+  & .fadeDown {
+    animation-delay: 3.5s;
+  }
+}
+
 @keyframes fadeDownAnime {
   from {
     opacity: 0;
@@ -59,17 +65,17 @@
 }
 
 .slideTopRight {
-    animation-name: slideTopRightAnime;
-    animation-duration: 0.7s;
-    animation-fill-mode: forwards;
-    transform: translate(100% 100%);
+  animation-name: slideTopRightAnime;
+  animation-duration: 0.7s;
+  animation-fill-mode: forwards;
+  transform: translate(100% 100%);
 }
 
 @keyframes slideTopRightAnime {
-    from {
-        transform: translate(100px, -100px);
-    }
-    to {
-        transform: translate(0);
-    }
+  from {
+    transform: translate(100px, -100px);
+  }
+  to {
+    transform: translate(0);
+  }
 }

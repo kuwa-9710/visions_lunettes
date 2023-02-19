@@ -47,6 +47,10 @@ html {
   animation-delay: 1s;
 }
 
+.top-page .fadeDown {
+  animation-delay: 3.5s;
+}
+
 @keyframes fadeDownAnime {
   from {
     opacity: 0;

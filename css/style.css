@@ -7,6 +7,7 @@ html {
   animation-name: fadeUpAnime;
   animation-duration: 1s;
   animation-fill-mode: forwards;
+  animation-delay: 2.5s;
   opacity: 0;
 }
 
@@ -25,7 +26,7 @@ html {
   animation-duration: 1s;
   animation-fill-mode: forwards;
   opacity: 0;
-  animation-delay: 0.5s;
+  animation-delay: 3s;
 }
 
 @keyframes fadeUpAnimeSm {
@@ -566,10 +567,10 @@ html {
   letter-spacing: 1px;
 }
 .mv__sub .fadeUpsm {
-  animation-delay: 0.3s;
+  animation-delay: 2.8s;
 }
 .mv .bg-image {
-  background-image: url("https://github.com/kuwa-9710/visions_lunettes/blob/main/image/mv-img_compressed.jpg?raw=true");
+  background-image: url("../image/mv-img_compressed.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 0 0 0 273px;
@@ -596,6 +597,7 @@ html {
   animation-duration: 1s;
   animation-fill-mode: forwards;
   opacity: 0;
+  animation-delay: 2.5s;
 }
 .mv .bg-image::after {
   font-size: 24px;
@@ -611,7 +613,7 @@ html {
   animation-duration: 1s;
   animation-fill-mode: forwards;
   opacity: 0;
-  animation-delay: 0.5s;
+  animation-delay: 3s;
 }
 
 .grasses {

@@ -789,6 +789,14 @@ html {
   }
 }
 
+/***************************************************
+ media:tab
+***************************************************/
+@media screen and (max-width: 1024px) {
+  .action .container {
+    max-width: 615px;
+  }
+}
 .swiper {
   width: 100%;
 }
@@ -975,6 +983,9 @@ html {
   position: absolute;
   top: 344px;
   left: 296px;
+}
+.leaf path {
+  fill: #86AC41;
 }
 
 /***************************************************
@@ -1366,6 +1377,9 @@ html {
     padding: 16px 27px;
     font-size: 16px;
   }
+  .business-html .brand {
+    margin-top: 147px;
+  }
 }
 .recruit {
   margin-top: 124px;
@@ -1467,15 +1481,15 @@ html {
 }
 
 .news-html .top {
-  background-image: url("https://github.com/kuwa-9710/visions_lunettes/blob/main/image/bg-news.jpg?raw=true");
+  background-image: url("../../image/bg-news.jpg");
 }
 
 .contact-html .top {
-  background-image: url("https://github.com/kuwa-9710/visions_lunettes/blob/main/image/bg-recruit.jpg?raw=true");
+  background-image: url("../../image/bg-recruit.jpg");
 }
 
 .business-html .top {
-  background-image: url("https://github.com/kuwa-9710/visions_lunettes/blob/main/image/business-image.jpg?raw=true");
+  background-image: url("../../image/business-image.jpg");
 }
 
 .category {
@@ -1711,8 +1725,61 @@ html {
   font-size: 24px;
   color: #fff;
   width: 398px;
-  line-height: 1.5em;
+  line-height: 1.8em;
   margin-right: 11.6vw;
+}
+.action__cards {
+  margin-top: 220px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.action__card {
+  width: 314px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 55px;
+  text-align: center;
+}
+.action__card__title {
+  position: relative;
+  font-size: 37px;
+  font-weight: bold;
+}
+.action__card__title::before {
+  content: "01";
+  position: absolute;
+  top: -38px;
+  left: -31px;
+  color: #86AC41;
+  font-size: 50px;
+  font-family: "Nothing You Could Do", cursive;
+  transform: rotate(-13.5deg);
+}
+.action__card:nth-child(2) .action__card__title::before {
+  content: "02";
+}
+.action__card:nth-child(2) .action__card__img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
+}
+.action__card:nth-child(3) .action__card__title::before {
+  content: "03";
+}
+.action__card:nth-child(3) .action__card__img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
+}
+.action__card__img {
+  height: 221px;
+  width: 135px;
+}
+.action__card__text {
+  font-size: 24px;
+  line-height: 1.5em;
 }
 
 .wrapper {
@@ -1738,6 +1805,10 @@ html {
   border-left: 253px solid transparent; /* 左側の角度 */
 }
 
+.br-tab {
+  display: none;
+}
+
 /***************************************************
  1270px
 ***************************************************/
@@ -1748,8 +1819,141 @@ html {
   .action__text {
     margin-right: 6vw;
   }
+  .action__cards {
+    margin-top: 300px;
+  }
   .action-thumbnail::after {
     border-bottom: 570px solid #86ac41;
+  }
+}
+/***************************************************
+ media:tab
+***************************************************/
+@media screen and (max-width: 1024px) {
+  .action__title__1, .action__title__2 {
+    margin-right: 0;
+    padding: 11px 64px;
+    font-size: 40px;
+  }
+  .action__container {
+    position: relative;
+    transform: translateY(-360px);
+  }
+  .action__text {
+    margin-top: 168px;
+    color: #000000;
+    margin-right: 0;
+    text-align: center;
+    width: 100%;
+  }
+  .action__cards {
+    margin-top: 0;
+    flex-direction: column;
+    gap: 104px;
+    align-items: center;
+    transform: translateY(-64px);
+  }
+  .action__card {
+    width: 400px;
+  }
+  .action-thumbnail img {
+    width: 65vw;
+  }
+  .action-thumbnail::after {
+    border-bottom: 50vw solid #86ac41;
+  }
+  .br-tab {
+    display: inline;
+  }
+}
+@media screen and (max-width: 800px) {
+  .action__title__1, .action__title__2 {
+    font-size: 32px;
+  }
+  .action__text {
+    margin-top: 120px;
+  }
+  .action-thumbnail img {
+    width: 67vw;
+  }
+  .action-thumbnail::after {
+    border-bottom: 46vw solid #86ac41;
+  }
+}
+@media screen and (max-width: 710px) {
+  .aciton__text {
+    margin-top: 140px;
+  }
+}
+/***************************************************
+ media:sp
+***************************************************/
+@media screen and (max-width: 599px) {
+  .action {
+    margin-top: 70px;
+  }
+  .action__container {
+    top: 276px;
+  }
+  .action__title__1, .action__title__2 {
+    padding: 5px 15px;
+    font-size: 28px;
+    line-height: 1.5em;
+  }
+  .action__title__2 {
+    margin-top: 11px;
+  }
+  .action__text {
+    font-size: 20px;
+    margin-top: 52px;
+  }
+  .action .wrapper {
+    margin-top: 68px;
+  }
+  .action__cards {
+    margin-top: 34px;
+    gap: 94px;
+    transform: translateY(0);
+  }
+  .action__card {
+    width: 350px;
+    gap: 40px;
+  }
+  .action__card__title {
+    font-size: 24px;
+  }
+  .action__card__img {
+    height: 175px;
+    width: 107px;
+  }
+  .action__card__text {
+    font-size: 20px;
+  }
+  .action__card:nth-child(2) .action__card__img {
+    width: 299px;
+  }
+  .action-thumbnail img {
+    width: 78vw;
+  }
+  .action-thumbnail::after {
+    width: 81vw;
+    top: 30px;
+    border-bottom: 61vw solid #86ac41;
+    border-left: 56px solid transparent;
+  }
+  .br-tab {
+    display: inline;
+  }
+}
+@media screen and (max-width: 450px) {
+  .action__container {
+    top: 300px;
+  }
+  .action__title__1, .action__title__2 {
+    font-size: 20px;
+  }
+  .action__text {
+    font-size: 16px;
   }
 }
 .footer {

@@ -49,17 +49,6 @@ $(function () {
   }
 });
 
-// headerの背景色を変更するメソッド
-// $(function () {
-//   $(window).on("scroll", function () {
-//     if ($(".top").height() < $(this).scrollTop()) {
-//       $(".header").addClass("change-color");
-//     } else {
-//       $(".header").removeClass("change-color");
-//     }
-//   });
-// });
-
 // スマホメニュー
 $(function () {
   $(".header__nav__button").on("click", function () {
@@ -77,11 +66,13 @@ $(function () {
 
 //ローディングアニメーション
 $(function () {
-  $(".loader").delay(2000).fadeOut("slow");
-  $(".loader__logo").delay(1800).fadeOut("slow");
-  if (window.matchMedia("(max-width: 1024px)").matches) {
-  } else {
-    $(".grasses").delay(2500).fadeIn("slow");
+  if ($("div").hasClass("loader")) {
+    $(".loader").delay(2000).fadeOut("slow");
+    $(".loader__logo").delay(1800).fadeOut("slow");
+    if (window.matchMedia("(max-width: 1024px)").matches) {
+    } else {
+      $(".grasses").delay(2500).fadeIn("slow");
+    }
   }
 });
 

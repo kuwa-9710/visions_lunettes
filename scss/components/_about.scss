@@ -20,6 +20,9 @@
   position: absolute;
   top: 344px;
   left: 296px;
+  & path {
+    fill: $cLightGreen;
+  }
 }
 
 /***************************************************

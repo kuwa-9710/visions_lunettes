@@ -1,23 +1,41 @@
 .top {
   height: 422px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-position: center;
   background-size: cover;
-  
+
   &__container {
     text-align: center;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: inherit;
+      background-color: rgba($color: #000000, $alpha: 0.3);
+      z-index: 1;
+    }
 
     &__title {
       font-size: 48px;
       font-weight: bold;
       color: $cWhite;
+      position: relative;
+      z-index: 2;
     }
     &__sub {
       font-size: 18px;
       font-weight: bold;
       color: $cWhite;
+      position: relative;
+      z-index: 2;
     }
   }
 }
@@ -37,5 +55,11 @@
 .business-html {
   .top {
     background-image: url("../image/business-image.jpg");
+  }
+}
+
+.about-html {
+  .top {
+    background-image: url("../image/about-image.jpg");
   }
 }

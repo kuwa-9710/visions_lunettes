@@ -1,4 +1,10 @@
 .action {
+  margin-top: 128px;
+  @include sectionBgText(OUR ACTION);
+  &::before {
+    top: -150px;
+  }
+
   &__container {
     position: absolute;
     z-index: 11;
@@ -8,6 +14,7 @@
     flex-direction: column;
     align-items: flex-end;
   }
+
   &__title {
     &__1,
     &__2 {
@@ -22,6 +29,7 @@
       margin-top: 34px;
     }
   }
+
   &__text {
     margin-top: 40px;
     font-weight: bold;
@@ -255,7 +263,7 @@
     }
 
     &__text {
-      font-size: 20px;
+      font-size:18px;
       margin-top: 52px;
     }
 
@@ -280,7 +288,7 @@
         width: 107px;
       }
       &__text {
-        font-size: 20px;
+        font-size: 18px;
       }
 
       &:nth-child(2) {        

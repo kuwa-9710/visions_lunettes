@@ -16,6 +16,13 @@
       top: 50%;
       transform: translateY(50%);
     }
+
+    &--center {
+      font-size: 48px;
+      font-weight: bold;
+      position: relative;
+      text-align: center;
+    }
   }
 
   &__title__sub {
@@ -23,6 +30,13 @@
     width: 475px;
     font-size: 28px;
     color: $cLightGreen;
+
+    &--center {      
+      font-size: 18px;
+      color: $cLightGreen;
+      display: block;
+      text-align: center;
+    }
   }
 
   &__box {
@@ -43,38 +57,18 @@
   }
 }
 
-// business-html
-.action {
-  margin-top: 128px;
-  @include sectionBgText(OUR ACTION);
-  &::before {
-    top: -150px;
-  }
+/***************************************************
+ other html file
+***************************************************/
 
-  & .content {
-    &__title {
-      text-align: center;
-      width: auto;
-      &::after {
-        display: none;
-      }
 
-      &__sub {
-        color: #000000;
-        display: block;
-        width: auto;
-        text-align: center;
-      }
-    }
-  }
-}
 
 /***************************************************
  tab
 ***************************************************/
 @include media(tab) {
   .content {
-    &__title {      
+    &__title {
       &__sub {
         width: 100%;
       }
@@ -98,14 +92,20 @@
   .content {
     &__title {
       font-size: 36px;
+      &--center {
+        font-size: 32px;
+      }
       &__sub {
         font-size: 16px;
-      }      
+        &--center {
+          font-size: 16px;
+        }
+      }
     }
     &__box {
       width: 100%;
       &__title {
-        font-size: 32px;        
+        font-size: 32px;
       }
       &__text {
         margin-top: 16px;
@@ -131,9 +131,9 @@
         letter-spacing: 0.5px;
       }
       &__text {
-        font-size: 16px;   
-        margin-top: 11px;   
-        letter-spacing: 0.5px;  
+        font-size: 16px;
+        margin-top: 11px;
+        letter-spacing: 0.5px;
       }
     }
   }

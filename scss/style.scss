@@ -8,7 +8,7 @@
 @import "mixin/breakpoints";
 @import "mixin/mixin";
 
-// components
+// main page components
 @import "components/loader";
 @import "components/contents";
 @import "components/button";
@@ -25,8 +25,20 @@
 
 // sub page components
 @import "components/top";
+
+// news.html
 @import "components/category";
+
+// contact.html
 @import "components/contact";
+
+// business.html
 @import "components/action";
+
+// about.html
+@import "components/mission";
+@import "components/ceo";
+@import "components/company";
+@import "components/map";
 
 @import "components/footer";

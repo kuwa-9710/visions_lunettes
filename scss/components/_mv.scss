@@ -5,6 +5,7 @@ $mv-content-height: 800px;
 
 .mv {
   height: 900px;
+  min-height: 650px;
   &__content {
     height: $mv-content-height;
     width: $mv-content-width;
@@ -13,6 +14,7 @@ $mv-content-height: 800px;
     right: 0;
     color: $cBlack;
     max-width: 1540px;
+    min-height: 650px;
   }
 
   &__title {
@@ -50,6 +52,7 @@ $mv-content-height: 800px;
     right: 0;
     overflow: hidden;
     max-width: 1540px;
+    min-height: 650px;
 
     &::before {
       font-size: 56px;

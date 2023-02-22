@@ -1,0 +1,101 @@
+.mission {
+  position: relative;
+  background-image: url("../image/about-mission-bg.jpg");
+  background-size: cover;
+  min-height: 555px;
+  padding-top: 55px;
+
+  & .content__title--center {
+    color: $cWhite;
+  }
+
+  & .content__title__sub--center {
+    color: $cWhite;
+  }
+
+  &__text {
+    margin-top: 54px;
+    font-size: 24px;
+    font-weight: bold;
+    color: $cWhite;
+    letter-spacing: 3px;
+    line-height: 1.5em;
+    text-align: center;
+
+    &:last-child {
+      margin-top: 40px;
+    }
+  }
+
+  &__grasses {
+    position: absolute;
+    top: 4px;
+    left: 10.4vw;
+  }
+
+  &__leaf {
+    position: absolute;
+    bottom: 55px;
+    right: 8.4vw;
+  }
+}
+
+/***************************************************
+ 1150px
+***************************************************/
+@media screen and (max-width: 1150px) {
+  .mission {
+    &__grasses {
+      width: 200px;
+      left: 8vw;
+    }
+    &__leaf {
+      width: 141px;
+      bottom: 7px;
+      right: 6vw;
+    }
+  }
+}
+
+/***************************************************
+ media:tab
+***************************************************/
+@include media(tab) {
+  .mission {
+    padding-top: 69px;
+    &__text {
+      margin-top: 32px;
+      font-size: 20px;
+      padding: 0 20px;
+      line-height: 1.7em;
+      &:last-child {
+        margin-top: 25px;
+      }
+    }
+
+    &__grasses {
+      left: 0;
+      top: 0;
+    }
+  }
+}
+
+/***************************************************
+ media:sp
+***************************************************/
+@include media(sp) {
+  .mission {
+    &__text {
+      font-size: 16px;
+    }
+    &__grasses {
+      top: -45px;
+      width: 144px;
+    }
+    &__leaf {
+      width: 80px;
+      bottom: 0;
+      right: 7vw;
+    }
+  }
+}

@@ -1,0 +1,134 @@
+.ceo {
+  margin-top: 236px;
+  @include sectionBgText(MESSAGE);
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: 705px 388px;
+  grid-template-rows: 65px 542px;
+  justify-content: center;
+
+  & .content__title {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    font-size: 56px;
+  }
+
+  & .content__box {
+    grid-column: 1/3;
+    grid-row: 2/3;
+    width: 494px;
+
+    &__title {
+      font-size: 49px;
+      margin-top: 104px;
+      width: 434px;
+    }
+
+    &__text {
+      margin-top: 40px;
+      line-height: 1.7em;
+    }
+  }
+
+  & .thumbnail-box {
+    grid-column: 2/3;
+    grid-row: 1/3;
+    position: relative;
+
+    & .thumbnail {
+      margin-left: auto;
+      position: relative;
+      z-index: 10;
+    }
+
+    &::before {
+      content: "";
+      width: 517px;
+      height: 341px;
+      background-color: #c2c29e;
+      position: absolute;
+      bottom: 95px;
+      right: 0;
+    }
+  }
+}
+/***************************************************
+ 1200px
+***************************************************/
+@media screen and (max-width: 1200px) {
+  .ceo {
+    grid-template-columns: 605px 388px;
+    & .thumbnail-box {
+      &::before {
+        width: 417px;
+        height: 300px;
+      }
+    }
+  }
+}
+
+/***************************************************
+ media:tab
+***************************************************/
+@include media(tab) {
+  .ceo {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    margin-top: 94px;
+    & .content__title {
+      max-width: 615px;
+      width: 100%;
+      margin: 0 auto;
+      font-size: 32px;
+      order: 1;
+    }
+    & .content__box {
+      max-width: 615px;
+      width: 100%;
+      margin: 0 auto;
+      order: 2;      
+
+      &__title {
+        margin-top: 32px;
+        width: 100%;
+        font-size: 32px;
+      }
+
+      &__text {
+        margin-top: 12px;
+        font-size: 20px;
+      }
+    }
+    & .thumbnail-box {
+      max-width: 615px;
+      width: 100%;
+      margin: 0 auto;
+      margin-top: 36px;
+      order: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &::before {
+        height: 171px;
+        width: 100%;
+      }
+
+      & .thumbnail {
+        height: 327px;
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+/***************************************************
+ media:sp
+***************************************************/
+@include media(sp) {
+  .ceo {
+    & .content__box__text {
+      font-size: 16px;
+    }
+  }
+}

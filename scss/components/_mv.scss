@@ -163,15 +163,19 @@ $mv-content-height: 800px;
 
   .mv {
     height: $mv-content-height;
+    
     &__content {
       height: $mv-content-height;
       width: $mv-content-width;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
 
     &__title {
       font-size: 48px;
-      color: $cWhite;
-      margin-top: 50vh;
+      color: $cWhite;      
       position: relative;
       text-align: center;
       top: 0;

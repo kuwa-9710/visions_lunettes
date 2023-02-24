@@ -1,0 +1,100 @@
+.l-interview {
+  margin-top: 168px;
+  background-color: $cWhite;
+  @include sectionBgText(OUR MEMBER);
+  &::before {
+    top: -40px;
+    text-align: center;
+  }
+  & .content__title {
+    &--center {
+      padding-top: 130px;
+    }
+    &__sub--center {
+      margin-top: 30px;
+      font-size: 28px;      
+      color: #000000;
+    }
+  }
+
+  &__cards {
+    margin-top: 40px;
+    padding-bottom: 75px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__card {
+    width: 291px;
+    height: 620px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    &__img {
+      position: relative;
+      width: 100%;
+      height: 377px;
+      &::before {
+        content: "";
+        height: 50%;
+        width: 100%;
+        background-color: #c2c29e;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+
+      & img {
+        height: 100%;
+        position: relative;
+        z-index: 10;
+      }
+    }
+
+    // image background
+    &:nth-child(2) .l-interview__card__img::before {
+      background-color: #9ba36e;
+    }
+    &:nth-child(3) .l-interview__card__img::before {
+      background-color: #82a988;
+    }
+
+    &__title {
+      font-size: 24px;
+      font-weight: bold;
+      line-height: 1.5em;
+    }
+    &__text {
+      color: #666666;
+      font-size: 18px;
+      padding: 0 10px;
+    }
+  }
+  & .cta {
+    margin-top: 0;
+    padding: 13px 53px;
+    color: $cRecruitButton;
+    border: 1px solid $cRecruitButton;
+    font-size: 18px;
+  }
+}
+
+/***************************************************
+ media:tab
+***************************************************/
+@include media(tab) {
+  .l-interview {
+    &::before {
+      top: 28px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    &__cards {
+      justify-content: center;
+      gap: 24px;
+    }
+  }
+}

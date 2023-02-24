@@ -7,6 +7,15 @@
   font-size: 24px;
   border: 1px solid $cLightGreen;
   border-radius: 48px;
+  transition: all .3s ease-in-out;
+
+  &:hover {
+    letter-spacing: 1px;
+  }
+  &:active {
+    color: $cWhite;
+    background-color: $cLightGreen;
+  }
 }
 
 /***************************************************
@@ -18,6 +27,5 @@
     margin-top: 30px;
     padding: 16px 40px;
     font-size: 16px;
-
   }
 }

@@ -76,6 +76,29 @@ html {
     transform: translate(0);
   }
 }
+.float {
+  animation: floatAnime 5s infinite;
+}
+.float-delay-1 {
+  animation: floatAnime 5.5s infinite;
+  animation-delay: 0.5s;
+}
+.float-delay-2 {
+  animation: floatAnime 4.5s infinite;
+  animation-delay: 0.2s;
+}
+
+@keyframes floatAnime {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
 .wrap {
   position: relative;
   overflow: hidden;
@@ -244,6 +267,14 @@ html {
   font-size: 24px;
   border: 1px solid #86AC41;
   border-radius: 48px;
+  transition: all 0.3s ease-in-out;
+}
+.cta:hover {
+  letter-spacing: 1px;
+}
+.cta:active {
+  color: #fff;
+  background-color: #86AC41;
 }
 
 /***************************************************
@@ -498,18 +529,32 @@ html {
     padding-left: 20px;
   }
 }
+/***************************************************
+ other
+***************************************************/
 .news-html .header__title,
 .contact-html .header__title,
 .business-html .header__title,
-.about-html .header__title,
-.recruit-html .header__title {
+.about-html .header__title {
   color: #fff;
 }
 .news-html .header.change-color .header__title,
 .contact-html .header.change-color .header__title,
 .business-html .header.change-color .header__title,
-.about-html .header.change-color .header__title,
-.recruit-html .header.change-color .header__title {
+.about-html .header.change-color .header__title {
+  color: #333333;
+}
+
+.recruit-page .header {
+  color: #333333;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.recruit-page .header__title {
+  color: #333333;
+}
+.recruit-page .header .header__menu {
   color: #333333;
 }
 
@@ -1439,7 +1484,8 @@ html {
 /***************************************************
  その他
 ***************************************************/
-.about-html .recruit {
+.about-html .recruit,
+.recruit-page .recruit {
   margin-top: 0;
 }
 
@@ -2310,6 +2356,338 @@ html {
 @media screen and (max-width: 599px) {
   .map img {
     height: 192px;
+  }
+}
+.l-main {
+  position: relative;
+  height: 100vh;
+  min-height: 773px;
+  max-height: 773px;
+}
+.l-main__title {
+  position: absolute;
+  bottom: 75px;
+  z-index: 10;
+}
+.l-main__title h2 {
+  font-size: 48px;
+  font-weight: bold;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 6px 49px 6px 194px;
+  background-color: #fff;
+}
+.l-main__title h2:last-child {
+  margin-top: 19px;
+}
+.l-main__title::after {
+  content: "JOIN US";
+  font-family: "Nothing You Could Do", cursive;
+  font-size: 45px;
+  color: #42D76C;
+  position: absolute;
+  top: -34px;
+  left: 91px;
+  transform: rotate(-13.5deg);
+}
+.l-main__bg {
+  height: 100%;
+  width: 98%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.l-main__bg img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0px 0px 0px 174px;
+}
+
+/***************************************************
+ media:tab
+***************************************************/
+@media screen and (max-width: 1024px) {
+  .l-main__title {
+    left: 20px;
+  }
+  .l-main__title h2 {
+    padding: 7px 19px;
+  }
+  .l-main__title::after {
+    left: -7px;
+  }
+  .l-main__bg {
+    width: 100%;
+  }
+}
+/***************************************************
+ media:sp
+***************************************************/
+@media screen and (max-width: 599px) {
+  .l-main__title h2 {
+    font-size: 32px;
+  }
+  .l-main__title::after {
+    font-size: 32px;
+  }
+}
+.l-interview {
+  margin-top: 168px;
+  background-color: #fff;
+  position: relative;
+  /***************************************************
+   tab
+  ***************************************************/
+  /***************************************************
+   sp
+  ***************************************************/
+}
+.l-interview::before {
+  position: absolute;
+  z-index: 1;
+  top: -200px;
+  content: "OUR MEMBER";
+  opacity: 0.03;
+  font-weight: 700;
+  font-size: 228px;
+  white-space: nowrap;
+}
+@media screen and (max-width: 1024px) {
+  .l-interview::before {
+    font-size: 120px;
+    top: -85px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .l-interview::before {
+    font-size: 80px;
+    top: -48px;
+  }
+}
+.l-interview::before {
+  top: -40px;
+  text-align: center;
+}
+.l-interview .content__title--center {
+  padding-top: 130px;
+}
+.l-interview .content__title__sub--center {
+  margin-top: 30px;
+  font-size: 28px;
+  color: #000000;
+}
+.l-interview__cards {
+  margin-top: 40px;
+  padding-bottom: 75px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.l-interview__card {
+  width: 291px;
+  height: 620px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.l-interview__card__img {
+  position: relative;
+  width: 100%;
+  height: 377px;
+}
+.l-interview__card__img::before {
+  content: "";
+  height: 50%;
+  width: 100%;
+  background-color: #c2c29e;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.l-interview__card__img img {
+  height: 100%;
+  position: relative;
+  z-index: 10;
+}
+.l-interview__card:nth-child(2) .l-interview__card__img::before {
+  background-color: #9ba36e;
+}
+.l-interview__card:nth-child(3) .l-interview__card__img::before {
+  background-color: #82a988;
+}
+.l-interview__card__title {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.5em;
+}
+.l-interview__card__text {
+  color: #666666;
+  font-size: 18px;
+  padding: 0 10px;
+}
+.l-interview .cta {
+  margin-top: 0;
+  padding: 13px 53px;
+  color: #42D76C;
+  border: 1px solid #42D76C;
+  font-size: 18px;
+}
+
+/***************************************************
+ media:tab
+***************************************************/
+@media screen and (max-width: 1024px) {
+  .l-interview::before {
+    top: 28px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .l-interview__cards {
+    justify-content: center;
+    gap: 24px;
+  }
+}
+.l-work {
+  position: relative;
+}
+.l-work__bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.l-work__bg svg {
+  position: absolute;
+}
+.l-work__container {
+  position: relative;
+  z-index: 10;
+  padding-top: 138px;
+  text-align: center;
+}
+.l-work__sub {
+  font-size: 24px;
+}
+.l-work__main {
+  margin-top: 30px;
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 1.5em;
+}
+.l-work__text {
+  margin-top: 47px;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.5em;
+}
+.l-work__text:last-of-type {
+  margin-top: 16px;
+}
+.l-work .cta {
+  margin: 0 auto;
+  margin-top: 100px;
+  padding: 18px 88px;
+  color: #42D76C;
+  border: 1px solid #42D76C;
+}
+.l-work .cta:active {
+  color: #fff;
+  background-color: #42D76C;
+}
+
+.green-circle {
+  top: 15%;
+  right: 11%;
+}
+
+.white-circle {
+  top: 20%;
+  right: 10%;
+}
+
+.green-triangle {
+  top: 24%;
+  left: 15%;
+}
+
+.green-circle-border {
+  top: 72%;
+  left: 12%;
+}
+
+.white-square {
+  top: 98%;
+  left: 25%;
+}
+
+.green-square {
+  top: 95%;
+  left: 24%;
+}
+
+.green-triangle-2 {
+  top: 105%;
+  right: 26%;
+}
+
+.white-triangle {
+  top: 109%;
+  right: 25%;
+}
+
+.green-square-border {
+  top: 66%;
+  right: 15%;
+}
+
+/***************************************************
+ media:tab
+***************************************************/
+@media screen and (max-width: 1024px) {
+  .l-work__sub {
+    font-size: 18px;
+  }
+  .l-work__main {
+    font-size: 40px;
+  }
+  .l-work__text {
+    font-size: 20px;
+  }
+}
+/***************************************************
+800px
+***************************************************/
+@media screen and (max-width: 800px) {
+  .green-circle,
+  .white-circle,
+  .green-triangle,
+  .green-circle-border,
+  .white-square,
+  .green-square,
+  .green-triangle-2,
+  .white-triangle,
+  .green-square-border {
+    width: 50px;
+  }
+  .green-triangle {
+    left: 8%;
+  }
+}
+/***************************************************
+ media:sp
+***************************************************/
+@media screen and (max-width: 599px) {
+  .l-work__sub {
+    font-size: 14px;
+  }
+  .l-work__main {
+    font-size: 32px;
+  }
+  .l-work__text {
+    font-size: 16px;
   }
 }
 .footer {

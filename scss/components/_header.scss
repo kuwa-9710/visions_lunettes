@@ -287,11 +287,13 @@
   }
 }
 
+/***************************************************
+ other
+***************************************************/
 .news-html,
 .contact-html,
 .business-html,
-.about-html,
-.recruit-html {
+.about-html {
   .header {
     &__title {
       color: $cWhite;
@@ -301,6 +303,20 @@
       & .header__title {
         color: $cBlack;
       }
+    }
+  }
+}
+
+.recruit-page {
+  .header {
+    color: $cBlack;
+    backdrop-filter: blur(10px);
+    background-color: #ffffff33;
+    &__title {
+      color: $cBlack;
+    }
+    & .header__menu {
+      color: $cBlack;
     }
   }
 }

@@ -1,0 +1,148 @@
+.l-work {
+  position: relative;
+
+  &__bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    & svg {
+      position: absolute;
+    }
+  }
+  &__container {
+    position: relative;
+    z-index: 10;
+    padding-top: 138px;
+    text-align: center;
+  }
+  &__sub {
+    font-size: 24px;
+  }
+  &__main {
+    margin-top: 30px;
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 1.5em;
+  }
+  &__text {
+    margin-top: 47px;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.5em;
+    &:last-of-type {
+      margin-top: 16px;
+    }
+  }
+  & .cta {
+    margin: 0 auto;
+    margin-top: 100px;
+    padding: 18px 88px;
+    color: $cRecruitButton;
+    border: 1px solid $cRecruitButton;
+    &:active {
+      color: $cWhite;
+      background-color: $cRecruitButton;
+    }
+  }
+}
+
+// svg
+.green-circle {
+  top: 15%;
+  right: 11%;
+}
+
+.white-circle {
+  top: 20%;
+  right: 10%;
+}
+
+.green-triangle {
+  top: 24%;
+  left: 15%;
+}
+
+.green-circle-border {
+  top: 72%;
+  left: 12%;
+}
+
+.white-square {
+  top: 98%;
+  left: 25%;
+}
+
+.green-square {
+  top: 95%;
+  left: 24%;
+}
+
+.green-triangle-2 {
+  top: 105%;
+  right: 26%;
+}
+
+.white-triangle {
+  top: 109%;
+  right: 25%;
+}
+
+.green-square-border {
+  top: 66%;
+  right: 15%;
+}
+
+/***************************************************
+ media:tab
+***************************************************/
+@include media(tab) {
+  .l-work {
+    &__sub {
+      font-size: 18px;
+    }
+    &__main {
+      font-size: 40px;
+    }
+    &__text {
+      font-size: 20px;
+    }
+  }
+}
+
+/***************************************************
+800px
+***************************************************/
+@media screen and (max-width: 800px) {
+  .green-circle,
+  .white-circle,
+  .green-triangle,
+  .green-circle-border,
+  .white-square,
+  .green-square,
+  .green-triangle-2,
+  .white-triangle,
+  .green-square-border {
+    width: 50px;
+  }
+
+  .green-triangle {
+    left: 8%;
+  }
+}
+
+/***************************************************
+ media:sp
+***************************************************/
+@include media(sp) {
+  .l-work {
+    &__sub {
+      font-size: 14px;
+    }
+    &__main {
+      font-size: 32px;
+    }
+    &__text {
+      font-size: 16px;
+    }
+  }
+}

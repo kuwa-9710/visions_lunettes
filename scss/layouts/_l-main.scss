@@ -1,0 +1,84 @@
+.l-main {
+  position: relative;
+  height: 100vh;
+  min-height: 773px;
+  max-height: 773px;
+
+  &__title {
+    position: absolute;
+    bottom: 75px;
+    z-index: 10;
+    & h2 {
+      font-size: 48px;
+      font-weight: bold;
+      width: fit-content;
+      padding: 6px 49px 6px 194px;
+      background-color: $cWhite;
+
+      &:last-child {
+        margin-top: 19px;
+      }
+    }
+    &::after {
+      content: "JOIN US";
+      font-family: "Nothing You Could Do", cursive;
+      font-size: 45px;
+      color: $cRecruitButton;
+      position: absolute;
+      top: -34px;
+      left: 91px;
+      transform: rotate(-13.5deg);
+    }
+  }
+
+  &__bg {
+    height: 100%;
+    width: 98%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    & img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 0px 0px 0px 174px;
+    }
+  }
+}
+
+/***************************************************
+ media:tab
+***************************************************/
+@include media(tab) {
+  .l-main {
+    &__title {
+      left: 20px;
+      & h2 {
+        padding: 7px 19px;
+      }
+      &::after {
+        left: -7px;
+      }
+    }
+
+    &__bg {
+      width: 100%;
+    }
+  }
+}
+
+/***************************************************
+ media:sp
+***************************************************/
+@include media(sp) {
+    .l-main {
+        &__title {
+            & h2 {
+                font-size: 32px;
+            }
+            &::after {
+                font-size: 32px;
+            }
+        }
+    }
+}

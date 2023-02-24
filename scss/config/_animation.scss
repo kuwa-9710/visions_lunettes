@@ -79,3 +79,29 @@
     transform: translate(0);
   }
 }
+
+.float {
+  animation: floatAnime 5s infinite;
+
+  &-delay-1 {
+    animation: floatAnime 5.5s infinite;
+    animation-delay: .5s;
+  }
+
+  &-delay-2 {
+    animation: floatAnime 4.5s infinite;
+    animation-delay: .2s;
+  }
+}
+
+@keyframes floatAnime {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}

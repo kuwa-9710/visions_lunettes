@@ -2690,6 +2690,23 @@ html {
     font-size: 16px;
   }
 }
+.l-store {
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.l-store__title {
+  font-size: 48px;
+  font-weight: bold;
+}
+.l-store__text {
+  font-size: 32px;
+}
+
 .footer {
   height: 300px;
   color: #fff;

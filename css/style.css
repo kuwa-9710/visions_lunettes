@@ -354,6 +354,12 @@ html {
 .header__button .online-shop {
   font-size: 16px;
 }
+.header__button:hover {
+  background-color: #71da08;
+}
+.header__button:active {
+  background-color: rgba(102, 195, 8, 0.768627451);
+}
 .header__nav__button {
   display: none;
 }

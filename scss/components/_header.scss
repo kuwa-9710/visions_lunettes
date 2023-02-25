@@ -66,6 +66,12 @@
     & .online-shop {
       font-size: 16px;
     }
+    &:hover {
+      background-color: #71da08;
+    }
+    &:active {
+      background-color: #66c308c4;
+    }
   }
 
   &__nav__button {

@@ -267,7 +267,7 @@ html {
   font-size: 24px;
   border: 1px solid #86AC41;
   border-radius: 48px;
-  transition: all 0.3s ease-in-out;
+  transition: letter-spacing 0.3s ease-in-out;
 }
 .cta:hover {
   letter-spacing: 1px;

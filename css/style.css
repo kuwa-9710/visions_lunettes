@@ -345,6 +345,7 @@ html {
   background-color: #67c308;
   display: flex;
   gap: 10px;
+  cursor: pointer;
 }
 .header__button svg {
   width: 20px;
@@ -2704,7 +2705,8 @@ html {
   font-weight: bold;
 }
 .l-store__text {
-  font-size: 32px;
+  margin-top: 16px;
+  font-size: 20px;
 }
 
 .footer {

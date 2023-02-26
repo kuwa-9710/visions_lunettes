@@ -73,6 +73,7 @@
 @include media(sp) {
     .l-main {
         &__title {
+          bottom: 160px;
             & h2 {
                 font-size: 32px;
             }

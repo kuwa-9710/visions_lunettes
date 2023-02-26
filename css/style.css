@@ -1761,6 +1761,9 @@ html {
   .contact textarea {
     font-size: 20px;
   }
+  .contact input {
+    height: 40px;
+  }
   .contact__btn {
     margin-top: 40px;
   }

@@ -1317,11 +1317,15 @@ html {
   display: block;
   content: "";
   background-color: #C2C29E;
-  height: 31.3vw;
+  height: 0;
   width: 44.9vw;
   position: absolute;
   bottom: 0;
   right: 0;
+  transition: height 0.7s ease-in-out;
+}
+.brand .thumbnail-box.active::before {
+  height: 31.3vw;
 }
 .brand .thumbnail {
   display: inline-block;
@@ -1395,6 +1399,9 @@ html {
   .brand .thumbnail-box::before {
     width: 74.8vw;
     margin: 0 20px;
+    height: 0;
+  }
+  .brand .thumbnail-box.active::before {
     height: 52.3vw;
   }
   .brand .thumbnail {
@@ -2433,6 +2440,9 @@ html {
  media:sp
 ***************************************************/
 @media screen and (max-width: 599px) {
+  .l-main__title {
+    bottom: 160px;
+  }
   .l-main__title h2 {
     font-size: 32px;
   }

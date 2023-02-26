@@ -33,15 +33,20 @@
   & .thumbnail-box {
     grid-row: 1/4;
     position: relative;
+    
     &::before {
       display: block;
       content: "";
       background-color: $cGreenTea;
-      height: 31.3vw;
+      height: 0;
       width: 44.9vw;
       position: absolute;
       bottom: 0;
       right: 0;
+      transition: height .7s ease-in-out;      
+    }
+    &.active::before {
+      height: 31.3vw;
     }
   }
 
@@ -128,6 +133,9 @@
       &::before {
         width: 74.8vw;
         margin: 0 20px;
+        height: 0;
+      }
+      &.active::before {
         height: 52.3vw;
       }
     }

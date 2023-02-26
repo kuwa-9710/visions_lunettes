@@ -132,6 +132,17 @@ fadeInUps.forEach((fadeInUp) => {
   });
 });
 
+// brandがinviewした時の動作
+gsap.from(".brand .thumbnail-box", {
+  delay: 1,
+  scrollTrigger: {
+    trigger: ".brand .thumbnail-box",
+    start: "top 60%",    
+    toggleClass: { targets: ".brand .thumbnail-box", className: "active"},
+    once: true,
+  },
+});
+
 // about
 gsap.from(".leaf", {
   duration: 1,

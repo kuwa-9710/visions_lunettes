@@ -158,7 +158,7 @@ $mv-content-height: 800px;
  tab
 ***************************************************/
 @include media(tab) {
-  $mv-content-height: 100vh;
+  $mv-content-height: 100svh;
   $mv-content-width: 100vw;
 
   .mv {
